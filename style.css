@@ -416,7 +416,7 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   5. 選ばれる理由 (WHY US) ★2カラム（左右50%）最適化版
+   5. 選ばれる理由 (WHY US)
    ========================================================================== */
 .why-us-grid-premium {
     display: flex;
@@ -427,9 +427,8 @@ nav a:hover {
 @media (min-width: 992px) {
     .why-us-grid-premium {
         display: grid;
-        /* 理由1・理由2のカードを美しい均等50%ずつの2分割に変更 */
-        grid-template-columns: 1fr 1fr;
-        align-items: stretch; /* 左右のカードの高さを完璧に同期 */
+        grid-template-columns: 1fr 1fr; /* 左右50%ずつの2カラム */
+        align-items: stretch;           /* 左右のカード高さを揃える */
         gap: 24px;
     }
 }
@@ -442,7 +441,6 @@ nav a:hover {
     border: 1px solid #eef2ed;
     position: relative;
     overflow: hidden;
-    /* カード内をフレックスボックス化して下揃えに対応 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -470,7 +468,7 @@ nav a:hover {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px; /* 文章と画像の間隔を確保 */
+    margin-bottom: 24px;
 }
 
 .why-us-content-premium h3 {
@@ -499,15 +497,15 @@ nav a:hover {
     }
 }
 
-/* カードの文章下に追加した画像・イラストの共通最適化設定 */
+/* 写真・イラストの共通サイズ制限設定 (why-us.jpg / support-image.jpg に適応) */
 .why-us-sub-img {
     display: block;
     width: 100%;
-    max-width: 280px;      /* 左右均等カード内で最適なサイズ感に上限を設定 */
-    height: 180px;         /* 縦幅を固定し、写真とイラストの高さを強制同期 */
-    object-fit: contain;   /* 比率を保ったまま枠内に美しく収める */
-    margin: 0 auto;        /* センター配置 */
-    border-radius: 8px;
+    max-width: 320px;      /* 横幅をバランスの良いサイズに制限 */
+    height: 200px;         /* 写真とイラストの高さを完全に統一 */
+    object-fit: cover;     /* 写真やイラストが縦横に潰れたり歪んだりするのを防ぐ */
+    margin: 0 auto;        /* 中央に配置 */
+    border-radius: 12px;   /* 角を少し丸めて綺麗に見せる */
 }
 
 /* ==========================================================================
