@@ -1030,3 +1030,108 @@ footer {
         display: none;
     }
 }
+/* ==========================================================================
+   追加：右上のメニューボタン（ハンバーガーメニュー）のデザイン
+   ========================================================================== */
+.menu-wrapper {
+    position: relative;
+}
+
+/* チェックボックスは画面上から隠す */
+.menu-toggle-checkbox {
+    display: none;
+}
+
+/* 三本線メニューボタンの見た目 */
+.menu-btn-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 110;
+    position: relative;
+}
+
+.menu-btn-label span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1a1e26;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* メニューリスト全体のデザイン（右上にふわっと浮き出る箱型） */
+.nav-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #dbf9ee;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(20,204,131,0.15);
+    padding: 20px;
+    width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 105;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 16px !important;
+    text-align: left;
+}
+
+.nav-menu a {
+    display: block;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: #4f5b70;
+    padding: 4px 0;
+}
+
+.nav-menu a:hover {
+    color: #14cc83;
+}
+
+/* お問い合わせボタンをメニュー内で目立たせる */
+.nav-menu .btn-nav {
+    background-color: #14cc83;
+    color: #ffffff !important;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+
+.nav-menu .btn-nav:hover {
+    background-color: #10b372;
+}
+
+/* 【重要】ボタンが押された（チェックが入った）ときの動き */
+/* 1. 三本線を「×」に変形させる */
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #14cc83;
+}
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #14cc83;
+}
+
+/* 2. メニューをふわっと表示させる */
+.menu-toggle-checkbox:checked ~ .nav-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
