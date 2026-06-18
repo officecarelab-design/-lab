@@ -1164,3 +1164,7 @@ footer {
     transform: translateY(-10px) rotate(-45deg);
     background-color: #14cc83 !important;
 }
+/* スマホなどの狭い画面では、ロゴ横のキャッチコピーを非表示にしてスッキリさせる設定 */
+@media (max-width: 576px) {
+    .header-catchphrase { display: none !important; }
+}
