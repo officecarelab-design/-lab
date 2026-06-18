@@ -12,21 +12,32 @@
 <body>
 
     <header>
-        <div class="container header-container">
-            <a href="#" class="logo-link">
-                <img src="top-logo.png" alt="Office Care Lab" class="logo-img">
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; position: relative;">
+            <a href="#">
+                <img src="images/logo.png" alt="Office Care Lab" class="logo-img">
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#about">私たちの想い</a></li>
-                    <li><a href="#why-us">選ばれる理由</a></li>
-                    <li><a href="#value">5つの価値</a></li>
-                    <li><a href="#merit">認定のメリット</a></li>
-                    <li><a href="#flow">導入の流れ</a></li>
-                    <li><a href="#faq">よくある質問</a></li>
-                    <li><a href="#contact" class="btn-nav">お問い合わせ</a></li>
-                </ul>
-            </nav>
+            
+            <div class="menu-wrapper">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                
+                <label for="menu-toggle" class="menu-btn-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#about" onclick="document.getElementById('menu-toggle').checked = false;">私たちの想い</a></li>
+                        <li><a href="#why-us" onclick="document.getElementById('menu-toggle').checked = false;">選ばれる理由</a></li>
+                        <li><a href="#value" onclick="document.getElementById('menu-toggle').checked = false;">提供する価値</a></li>
+                        <li><a href="#cost" onclick="document.getElementById('menu-toggle').checked = false;">導入費用</a></li>
+                        <li><a href="#flow" onclick="document.getElementById('menu-toggle').checked = false;">導入の流れ</a></li>
+                        <li><a href="#faq" onclick="document.getElementById('menu-toggle').checked = false;">よくある質問</a></li>
+                        <li><a href="#contact" class="btn-nav" onclick="document.getElementById('menu-toggle').checked = false;">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
