@@ -1135,3 +1135,32 @@ footer {
     visibility: visible;
     transform: translateY(0);
 }
+/* ==========================================================================
+   メニュー開閉の制御（HTMLのインラインを上書きするための基本ルール）
+   ========================================================================== */
+.nav-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* ボタンが押された（チェックが入った）ときの動き */
+.menu-toggle-checkbox:checked ~ .nav-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+/* 三本線を「×」に変形させるアニメーション */
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #14cc83 !important;
+}
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(2) {
+    opacity: 0 !important;
+}
+.menu-toggle-checkbox:checked ~ .menu-btn-label span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: #14cc83 !important;
+}
