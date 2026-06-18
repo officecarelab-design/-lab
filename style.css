@@ -1168,3 +1168,30 @@ footer {
 @media (max-width: 576px) {
     .header-catchphrase { display: none !important; }
 }
+/* ==========================================================================
+   画面サイズに合わせたロゴ横キャッチコピーのフォントサイズ自動調整
+   ========================================================================== */
+/* パソコンなどの大画面 */
+@media (min-width: 769px) {
+    .catchphrase-text {
+        font-size: 13px !important;
+    }
+}
+
+/* タブレットや少し小さめの画面 */
+@media (max-width: 768px) {
+    .catchphrase-text {
+        font-size: 11px !important;
+    }
+}
+
+/* スマートフォン（携帯）の画面：文字を小さくして確実に1行に収める */
+@media (max-width: 480px) {
+    .catchphrase-text {
+        font-size: 9.5px !important; /* スマホでもギリギリ読めるおしゃれな極小サイズ */
+        letter-spacing: 0.01em !important;
+    }
+    .logo-img {
+        height: 32px !important; /* ロゴも少しだけコンパクトにして余白を確保 */
+    }
+}
