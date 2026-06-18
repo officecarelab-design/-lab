@@ -11,30 +11,33 @@
 </head>
 <body>
 
-    <header>
-        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; position: relative;">
-            <a href="#">
-                <img src="images/logo.png" alt="Office Care Lab" class="logo-img">
+    <header style="background-color: #ffffff; box-shadow: 0 2px 20px rgba(0,0,0,0.02); position: sticky; top: 0; z-index: 9999; padding: 14px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; position: relative; max-width: 1160px; margin: 0 auto; padding: 0 24px; box-sizing: border-box;">
+            
+            <a href="#" style="display: block;">
+                <img src="images/logo.png" alt="Office Care Lab" class="logo-img" style="height: 44px; width: auto; display: block;">
             </a>
             
-            <div class="menu-wrapper">
-                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <div style="position: relative; display: block; height: 24px;">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" style="display: none;">
                 
-                <label for="menu-toggle" class="menu-btn-label">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <label for="menu-toggle" class="menu-btn-label" style="display: flex; flex-direction: column; justify-content: space-between; width: 32px; height: 22px; cursor: pointer; z-index: 10001; position: relative;">
+                    <span style="display: block; width: 100%; height: 3px; background-color: #1a1e26; border-radius: 2px; transition: all 0.3s ease;"></span>
+                    <span style="display: block; width: 100%; height: 3px; background-color: #1a1e26; border-radius: 2px; transition: all 0.3s ease;"></span>
+                    <span style="display: block; width: 100%; height: 3px; background-color: #1a1e26; border-radius: 2px; transition: all 0.3s ease;"></span>
                 </label>
                 
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#about" onclick="document.getElementById('menu-toggle').checked = false;">私たちの想い</a></li>
-                        <li><a href="#why-us" onclick="document.getElementById('menu-toggle').checked = false;">選ばれる理由</a></li>
-                        <li><a href="#value" onclick="document.getElementById('menu-toggle').checked = false;">提供する価値</a></li>
-                        <li><a href="#cost" onclick="document.getElementById('menu-toggle').checked = false;">導入費用</a></li>
-                        <li><a href="#flow" onclick="document.getElementById('menu-toggle').checked = false;">導入の流れ</a></li>
-                        <li><a href="#faq" onclick="document.getElementById('menu-toggle').checked = false;">よくある質問</a></li>
-                        <li><a href="#contact" class="btn-nav" onclick="document.getElementById('menu-toggle').checked = false;">お問い合わせ</a></li>
+                <nav class="nav-menu" style="position: absolute; top: 40px; right: 0; background-color: #ffffff; border: 1px solid #dbf9ee; border-radius: 12px; box-shadow: 0 10px 35px rgba(20,204,131,0.18); padding: 24px 20px; width: 240px; z-index: 10000; box-sizing: border-box;">
+                    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px;">
+                        <li style="margin: 0; padding: 0;"><a href="#about" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">私たちの想い</a></li>
+                        <li style="margin: 0; padding: 0;"><a href="#why-us" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">選ばれる理由</a></li>
+                        <li style="margin: 0; padding: 0;"><a href="#value" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">提供する価値</a></li>
+                        <li style="margin: 0; padding: 0;"><a href="#cost" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">導入費用</a></li>
+                        <li style="margin: 0; padding: 0;"><a href="#flow" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">導入の流れ</a></li>
+                        <li style="margin: 0; padding: 0;"><a href="#faq" style="display: block; font-size: 15px; font-weight: bold; color: #4f5b70; text-decoration: none;" onclick="document.getElementById('menu-toggle').checked = false;">よくある質問</a></li>
+                        <li style="margin: 0; padding: 0; margin-top: 4px;">
+                            <a href="#contact" style="display: block; background-color: #14cc83; color: #ffffff; text-align: center; padding: 12px; border-radius: 8px; font-size: 15px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 12px rgba(20,204,131,0.2);" onclick="document.getElementById('menu-toggle').checked = false;">お問い合わせ</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
