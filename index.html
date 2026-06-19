@@ -64,58 +64,87 @@
         </div>
     </header>
 
-    <section id="hero" style="position: relative; padding: 100px 0 120px 0; background: linear-gradient(135deg, #effaf6 0%, #ffffff 50%, #f4fbf9 100%); overflow: hidden; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;">
+   <section id="hero" class="hero-section" style="padding: 60px 0 80px 0; background: linear-gradient(135deg, #f0faf6 0%, #ffffff 60%, #f7fdfb 100%); font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; overflow: hidden;">
     
-    <div style="position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(20,204,131,0.08) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1;"></div>
-    <div style="position: absolute; bottom: -5%; left: -5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(20,204,131,0.05) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1;"></div>
+    <style>
+        .hero-container {
+            max-width: 1140px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;
+        }
+        .hero-flex {
+            display: block; /* 標準は縦並び（スマホ優先） */
+        }
+        .hero-text {
+            width: 100%; text-align: center; margin-bottom: 40px;
+        }
+        .hero-visual {
+            width: 100%; max-width: 480px; margin: 0 auto; text-align: center; position: relative;
+        }
+        .hero-title {
+            font-size: 26px; color: #1a1e26; margin: 0 0 16px 0; font-weight: 800; line-height: 1.4; letter-spacing: 0.02em;
+        }
+        .hero-desc {
+            font-size: 14px; color: #4f5b70; margin: 0 0 32px 0; font-weight: 500; line-height: 1.7; text-align: left;
+        }
+        .hero-btn-primary {
+            display: block; width: 100%; text-align: center; padding: 16px 20px; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 15px; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 8px 20px rgba(20,204,131,0.25); margin-bottom: 12px; box-sizing: border-box; letter-spacing: 0.05em;
+        }
+        .hero-btn-secondary {
+            display: block; width: 100%; text-align: center; padding: 15px 20px; background-color: #ffffff; color: #4f5b70; font-size: 14px; font-weight: bold; text-decoration: none; border-radius: 50px; border: 1px solid #cbd5e1; box-sizing: border-box;
+        }
 
-    <div style="max-width: 1140px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; position: relative; z-index: 2;">
-        
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+        /* 💻 パソコンで見るときだけ、横並びのおしゃれなレイアウトに切り替える設定 */
+        @media (min-width: 768px) {
+            .hero-section { padding: 100px 0 120px 0 !important; }
+            .hero-flex { display: table; width: 100%; table-layout: fixed; }
+            .hero-text { display: table-cell; width: 55%; vertical-align: middle; text-align: left; padding-right: 40px; margin-bottom: 0; }
+            .hero-visual { display: table-cell; width: 45%; vertical-align: middle; }
+            .hero-title { font-size: 34px; line-height: 1.45; }
+            .hero-desc { font-size: 15px; text-align: left; }
+            .hero-btn-primary { display: inline-flex; width: auto; padding: 18px 36px; margin-bottom: 0; margin-right: 12px; }
+            .hero-btn-secondary { display: inline-flex; width: auto; padding: 18px 28px; }
+        }
+    </style>
+
+    <div class="hero-container">
+        <div class="hero-flex">
             
-            <div style="flex: 1 1 500px; max-width: 620px;">
+            <div class="hero-text">
                 
-                <div style="display: inline-block; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 12px; font-weight: bold; padding: 6px 16px; border-radius: 50px; letter-spacing: 0.05em; margin-bottom: 24px; box-shadow: 0 4px 10px rgba(20,204,131,0.15);">
-                    ✨ 毎月先着3社限定・無料出張体験キャンペーン実施中
+                <div style="display: inline-block; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 11px; font-weight: bold; padding: 5px 14px; border-radius: 50px; letter-spacing: 0.05em; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(20,204,131,0.15);">
+                    ✨ 毎月先着3社限定・無料出張体験キャンペーン受付中
                 </div>
 
-                <h1 style="font-size: 34px; color: #1a1e26; margin: 0 0 20px 0; font-weight: 800; line-height: 1.45; letter-spacing: 0.03em;">
-                    オフィスの会議室が、<br>
+                <h1 class="hero-title">
+                    いつもの会社の一角が、<br>
                     <span style="color: #14cc83; background: linear-gradient(transparent 70%, #dbf9ee 70%);">笑顔とはたらく活力</span>を生む場所に変わる。
                 </h1>
 
-                <p style="font-size: 15px; color: #4f5b70; margin: 0 0 36px 0; font-weight: 500; line-height: 1.8;">
+                <p class="hero-desc">
                     国家資格を持つプロの施術家が貴社へ訪問。<br>
-                    就業中のわずかな時間で、従業員様の心と体を本格クイックケア。<br>
+                    オフィス内のちょっとしたスペースやリフレッシュエリアをお借りして、就業中のわずかな時間で従業員様の心と体を本格クイックケア。<br>
                     社内をパッと明るく元気にし、企業の「健康経営」を力強く一歩進めます。
                 </p>
 
-                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                    <a href="#contact" style="display: inline-flex; align-items: center; justify-content: center; padding: 18px 36px; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 15px; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 8px 25px rgba(20,204,131,0.3); transition: all 0.2s ease; letter-spacing: 0.05em;">
+                <div style="margin-top: 24px;">
+                    <a href="#contact" class="hero-btn-primary">
                         🎁 まずは無料で試す（1時間体験会）
                     </a>
-                    <a href="price.html" style="display: inline-flex; align-items: center; justify-content: center; padding: 18px 28px; background-color: #ffffff; color: #4f5b70; font-size: 14px; font-weight: bold; text-decoration: none; border-radius: 50px; border: 1px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: all 0.2s ease;">
+                    <a href="price.html" class="hero-btn-secondary">
                         料金プランを見る ➔
                     </a>
                 </div>
 
             </div>
 
-            <div style="flex: 1 1 400px; max-width: 460px; text-align: center; position: relative;">
-                <div style="position: relative; border-radius: 32px; overflow: hidden; box-shadow: 0 20px 50px rgba(26,30,38,0.08); background-color: #ffffff;">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="明るいオフィスでのリフレッシュイメージ" style="width: 100%; height: auto; display: block; object-fit: cover;">
+            <div class="hero-visual">
+                <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(26,30,38,0.08); background-color: #ffffff; z-index: 2;">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="明るいオフィス環境と健康経営のイメージ" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
                 
-                <div style="position: absolute; -webkit-z-index: -1; z-index: -1; top: 20px; left: -20px; width: 100%; height: 100%; border: 2px solid #14cc83; border-radius: 32px; opacity: 0.3;"></div>
+                <div style="position: absolute; z-index: 1; top: 15px; left: -15px; width: 100%; height: 100%; border: 2px solid #14cc83; border-radius: 24px; opacity: 0.2;"></div>
             </div>
 
         </div>
-
-    </div>
-
-    <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); text-align: center; color: #94a3b8; font-size: 11px; font-weight: bold; letter-spacing: 0.1em; animation: pulse 2s infinite;">
-        SCROLL
-        <div style="margin-top: 4px; font-size: 14px;">👇</div>
     </div>
 </section>
 
