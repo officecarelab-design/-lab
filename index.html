@@ -64,69 +64,80 @@
         </div>
     </header>
 
-   <section id="hero" class="hero-section" style="padding: 60px 0 80px 0; background: linear-gradient(135deg, #f0faf6 0%, #ffffff 60%, #f7fdfb 100%); font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; overflow: hidden;">
+  <!-- ==========================================================================
+   🌅 HERO（ファーストビュー：スマホ並び順＆余白修正版）
+   ========================================================================== -->
+<section id="hero" class="hero-section" style="padding: 50px 0 60px 0; background: linear-gradient(135deg, #f0faf6 0%, #ffffff 60%, #f7fdfb 100%); font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; overflow: hidden;">
     
     <style>
         .hero-container {
             max-width: 1140px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;
         }
+        
+        /* 📱 スマホ環境（標準）の設定 */
         .hero-flex {
-            display: block; /* 標準は縦並び（スマホ優先） */
+            display: flex;
+            flex-direction: column; /* 上から下に縦並び */
         }
         .hero-text {
-            width: 100%; text-align: center; margin-bottom: 40px;
+            width: 100%; text-align: center; order: 1; /* 1番目にテキストを表示 */
         }
         .hero-visual {
-            width: 100%; max-width: 480px; margin: 0 auto; text-align: center; position: relative;
+            width: 100%; max-width: 480px; margin: 30px auto 0 auto; text-align: center; position: relative; order: 2; /* 2番目に画像を表示（これで画像連続を防ぎます） */
         }
         .hero-title {
-            font-size: 26px; color: #1a1e26; margin: 0 0 16px 0; font-weight: 800; line-height: 1.4; letter-spacing: 0.02em;
+            font-size: 25px; color: #1a1e26; margin: 0 0 18px 0; font-weight: 800; line-height: 1.5; letter-spacing: 0.02em;
         }
         .hero-desc {
-            font-size: 14px; color: #4f5b70; margin: 0 0 32px 0; font-weight: 500; line-height: 1.7; text-align: left;
+            font-size: 14px; color: #4f5b70; margin: 0 0 28px 0; font-weight: 500; line-height: 1.7; text-align: left;
         }
         .hero-btn-primary {
             display: block; width: 100%; text-align: center; padding: 16px 20px; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 15px; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 8px 20px rgba(20,204,131,0.25); margin-bottom: 12px; box-sizing: border-box; letter-spacing: 0.05em;
         }
         .hero-btn-secondary {
-            display: block; width: 100%; text-align: center; padding: 15px 20px; background-color: #ffffff; color: #4f5b70; font-size: 14px; font-weight: bold; text-decoration: none; border-radius: 50px; border: 1px solid #cbd5e1; box-sizing: border-box;
+            display: block; width: 100%; text-align: center; padding: 15px 20px; background-color: #ffffff; color: #4f5b70; font-size: 14px; font-weight: bold; text-decoration: none; border-radius: 50px; border: 1px solid #cbd5e1; box-sizing: border-box; margin-bottom: 10px;
         }
 
-        /* 💻 パソコンで見るときだけ、横並びのおしゃれなレイアウトに切り替える設定 */
+        /* 💻 パソコンで見るときだけ、左右の横並びに切り替える設定 */
         @media (min-width: 768px) {
-            .hero-section { padding: 100px 0 120px 0 !important; }
-            .hero-flex { display: table; width: 100%; table-layout: fixed; }
-            .hero-text { display: table-cell; width: 55%; vertical-align: middle; text-align: left; padding-right: 40px; margin-bottom: 0; }
-            .hero-visual { display: table-cell; width: 45%; vertical-align: middle; }
-            .hero-title { font-size: 34px; line-height: 1.45; }
-            .hero-desc { font-size: 15px; text-align: left; }
+            .hero-section { padding: 90px 0 110px 0 !important; }
+            .hero-flex { flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; }
+            .hero-text { width: 55%; text-align: left; order: 1; }
+            .hero-visual { width: 45%; margin: 0; order: 2; }
+            .hero-title { font-size: 34px; line-height: 1.5; }
+            .hero-desc { font-size: 15px; }
             .hero-btn-primary { display: inline-flex; width: auto; padding: 18px 36px; margin-bottom: 0; margin-right: 12px; }
-            .hero-btn-secondary { display: inline-flex; width: auto; padding: 18px 28px; }
+            .hero-btn-secondary { display: inline-flex; width: auto; padding: 18px 28px; margin-bottom: 0; }
         }
     </style>
 
     <div class="hero-container">
         <div class="hero-flex">
             
+            <!-- ✍️ テキスト・キャッチコピーエリア（スマホでは一番上） -->
             <div class="hero-text">
                 
+                <!-- キャンペーン告知バッジ -->
                 <div style="display: inline-block; background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; font-size: 11px; font-weight: bold; padding: 5px 14px; border-radius: 50px; letter-spacing: 0.05em; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(20,204,131,0.15);">
                     ✨ 毎月先着3社限定・無料出張体験キャンペーン受付中
                 </div>
 
-               <h1 class="hero-title" style="font-size: 26px; color: #1a1e26; margin: 0 0 16px 0; font-weight: 800; line-height: 1.5; letter-spacing: 0.02em;">
-    会社の一部のスペースが、<br>
-    <span style="color: #14cc83; background: linear-gradient(transparent 70%, #dbf9ee 70%); display: inline-block;">笑顔とはたらく活力を</span><br>
-    生む場所に変わる。
-</h1>
+                <!-- 3行分割＆2行目のみ緑色のキャッチコピー -->
+                <h1 class="hero-title">
+                    会社の一部のスペースが、<br>
+                    <span style="color: #14cc83; background: linear-gradient(transparent 70%, #dbf9ee 70%); display: inline-block;">笑顔とはたらく活力を</span><br>
+                    生む場所に変わる。
+                </h1>
 
+                <!-- サブコピー -->
                 <p class="hero-desc">
                     国家資格を持つプロの施術家が貴社へ訪問。<br>
                     オフィス内のちょっとしたスペースやリフレッシュエリアをお借りして、就業中のわずかな時間で従業員様の心と体を本格クイックケア。<br>
                     社内をパッと明るく元気にし、企業の「健康経営」を力強く一歩進めます。
                 </p>
 
-                <div style="margin-top: 24px;">
+                <!-- アクションボタン（スマホでは画像の前にこれが来ます） -->
+                <div>
                     <a href="#contact" class="hero-btn-primary">
                         🎁 まずは無料で試す（1時間体験会）
                     </a>
@@ -137,11 +148,14 @@
 
             </div>
 
+            <!-- 📸 ビジュアルエリア（スマホではボタンの下に配置され、次の画像と綺麗にセパレートされます） -->
             <div class="hero-visual">
                 <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(26,30,38,0.08); background-color: #ffffff; z-index: 2;">
+                    <!-- 💡 1枚目の画像（上部） -->
                     <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="明るいオフィス環境と健康経営のイメージ" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
                 
+                <!-- 写真の背後にあるおしゃれな緑のアクセント枠 -->
                 <div style="position: absolute; z-index: 1; top: 15px; left: -15px; width: 100%; height: 100%; border: 2px solid #14cc83; border-radius: 24px; opacity: 0.2;"></div>
             </div>
 
