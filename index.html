@@ -74,7 +74,10 @@
     
     <div style="width: 100%; max-width: 1140px; margin: 0 auto; text-align: center; background: none !important;">
         
-        <img src="img/girl.png" alt="働くオフィスが癒しの空間に。心と体を整える、新しい福利厚生" style="width: 100%; height: auto; display: block; margin: 0 auto; border: none !important; box-shadow: none !important;">
+        <img src="girl.png" 
+             onerror="this.onerror=null; this.src='img/girl.png';" 
+             alt="働くオフィスが癒しの空間に。心と体を整える、新しい福利厚生" 
+             style="width: 100%; height: auto; display: block; margin: 0 auto; border: none !important; box-shadow: none !important;">
         
     </div>
 
@@ -113,7 +116,7 @@
             text-decoration: none !important; border-radius: 50px !important; border: 1px solid #cbd5e1 !important; box-sizing: border-box !important;
         }
 
-        /* パソコン（画面横幅768px以上）のときだけ横並びに切り替え */
+        /* パソコン（画面横幅768px以上）の設定 */
         @media (min-width: 768px) {
             .hero-clean-btn-group {
                 flex-direction: row !important;
