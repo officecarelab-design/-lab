@@ -70,110 +70,61 @@
 <!-- ==========================================================================
    🌅 HERO（ファーストビュー：完成版一枚画像 ＋ 下部2連ボタン仕様）
    ========================================================================== -->
-<section id="hero" class="hero-section" style="position: relative; padding: 0 0 40px 0; background-color: #ffffff; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; overflow: hidden;">
+<section id="hero" style="width: 100%; padding: 0 0 40px 0; background-color: #ffffff; font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif; overflow: hidden;">
     
-    <style>
-        /* 📱 スマホ環境（標準）のスタイル設定 */
-        .hero-banner-wrap {
-            width: 100%;
-            position: relative;
-        }
-        .hero-banner-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    <div style="max-width: 100%; margin: 0 auto; text-align: center;">
         
-        /* 画像下部のボタンエリア */
-        .hero-action-container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 24px 20px 0 20px;
-            box-sizing: border-box;
-        }
-        .hero-btn-group {
-            display: flex;
-            flex-direction: column; /* スマホではボタンを縦に並べる */
-            gap: 12px;
-            width: 100%;
-            max-width: 360px;
-            margin: 0 auto;
-        }
-        .hero-btn-primary {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 16px 20px;
-            background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%);
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(20,204,131,0.25);
-            box-sizing: border-box;
-            letter-spacing: 0.05em;
-        }
-        .hero-btn-secondary {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 15px 20px;
-            background-color: #ffffff;
-            color: #4f5b70;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 1px solid #cbd5e1;
-            box-sizing: border-box;
-        }
-
-        /* 💻 パソコン環境（画面幅768px以上）のスタイル切り替え */
-        @media (min-width: 768px) {
-            .hero-section {
-                padding: 0 0 60px 0;
-            }
-            .hero-btn-group {
-                flex-direction: row; /* パソコンでは横並びにする */
-                max-width: 600px;
-                justify-content: center;
-                gap: 16px;
-                margin-top: 10px;
-            }
-            .hero-btn-primary {
-                width: auto;
-                padding: 18px 40px;
-                font-size: 16px;
-            }
-            .hero-btn-secondary {
-                width: auto;
-                padding: 18px 32px;
-                font-size: 15px;
-            }
-        }
-    </style>
-
-    <!-- 🌅 最上部：完成版ビジュアル画像を配置 -->
-    <div class="hero-banner-wrap">
-        <!-- 💡 実際の画像フォルダの場所に合わせて、src内のパス（img/など）を必要に応じて書き換えてください -->
-        <img src="img/072cb55c-df91-456e-9f42-3bb7961965f3.png" alt="働くオフィスが癒しの空間に。心と体を整える、新しい福利厚生" class="hero-banner-img">
+        <img src="img/072cb55c-df91-456e-9f42-3bb7961965f3.png" alt="働くオフィスが癒しの空間に。心と体を整える、新しい福利厚生" style="width: 100%; max-width: 1140px; height: auto; display: inline-block; vertical-align: bottom;">
+        
     </div>
 
-    <!-- 🎯 画像下部：無料体験 ＆ 料金プランの2連ボタン -->
-    <div class="hero-action-container">
-        <div class="hero-btn-group">
-            <!-- 1. 無料体験ボタン（メインアクション） -->
-            <a href="#contact" class="hero-btn-primary">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 24px 20px 0 20px; box-sizing: border-box;">
+        
+        <div class="hero-btn-group-responsive">
+            <a href="#contact" class="hero-btn-primary-item">
                 🎁 まずは無料で試す（1時間体験会）
             </a>
             
-            <!-- 2. 料金プランボタン（サブアクション） -->
-            <a href="price.html" class="hero-btn-secondary">
+            <a href="price.html" class="hero-btn-secondary-item">
                 料金プランを見る ➔
             </a>
         </div>
+
     </div>
+
+    <style>
+        .hero-btn-group-responsive {
+            display: flex;
+            flex-direction: column; /* スマホは縦 */
+            gap: 12px;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        .hero-btn-primary-item {
+            display: block; width: 100%; text-align: center; padding: 16px 20px; 
+            background: linear-gradient(90deg, #14cc83 0%, #0fa86b 100%); color: #ffffff; 
+            font-size: 15px; font-weight: bold; text-decoration: none; border-radius: 50px; 
+            box-shadow: 0 8px 20px rgba(20,204,131,0.25); box-sizing: border-box; letter-spacing: 0.05em;
+        }
+        .hero-btn-secondary-item {
+            display: block; width: 100%; text-align: center; padding: 15px 20px; 
+            background-color: #ffffff; color: #4f5b70; font-size: 14px; font-weight: bold; 
+            text-decoration: none; border-radius: 50px; border: 1px solid #cbd5e1; box-sizing: border-box;
+        }
+
+        /* 💻 画面の横幅が広いパソコン用の切り替え設定 */
+        @media (min-width: 768px) {
+            .hero-btn-group-responsive {
+                flex-direction: row; /* 横並びにする */
+                max-width: 580px;
+                justify-content: center;
+                gap: 16px;
+            }
+            .hero-btn-primary-item { width: auto; padding: 18px 36px; font-size: 16px; }
+            .hero-btn-secondary-item { width: auto; padding: 18px 28px; font-size: 15px; }
+        }
+    </style>
 
 </section>
     <div class="hero-container">
