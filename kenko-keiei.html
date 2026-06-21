@@ -18,11 +18,6 @@
             --new-color: #f59e0b;         /* 新設バッジ（オレンジ） */
         }
 
-        /* 🌟 スムーズなスクロール効果を追加 */
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             color: var(--dark-color);
@@ -673,7 +668,7 @@
                 <p class="task-desc">定年延長に伴い、シニア層の身体特性に配慮した環境整備や労災防止施策を行っているか。</p>
                 <div class="solution-box">
                     <div class="sol-title">🤝 Office Care Labのサポート内容</div>
-                    <div>出張施術の際、シニア従業員を対象に「つまずき・転倒予防のための簡易体力測定＆バランス体幹チェック」を実施。さらに体の専門家監修の「シニア専用・労災防止筋力キープマニュアル」を提供します。</div>
+                    <div>出張施術の際、シニア従業員を対象に「つまずき・転倒予防のための簡易体力測定＆バランス体幹チェック」を実施.さらに体の専門家監修の「シニア専用・労災防止筋力キープマニュアル」を提供します。</div>
                     <div class="sol-result"><b>💡 解決結果：</b>2026年最新基準の超重要項目である「高年齢従業員の労災防止施策」が、自社での面倒な企画なしで一発クリアになります。</div>
                 </div>
             </div>
@@ -713,11 +708,11 @@
 
     <!-- 🚪 フッター・アクションボタンエリア -->
     <div class="footer-action-area">
-        <!-- 💡 費用最下部ボタンと同様に、LP内のお問い合わせエリア（#contact）へスムーズにスクロール移動させます -->
-        <a href="#contact" class="btn-base btn-consultation">💬 パッケージ導入についての無料相談はこちら</a>
+        <!-- 💬 無料相談：別ファイル index.html の中のお問い合わせフォーム（#contact）へ飛ばします -->
+        <a href="index.html#contact" class="btn-base btn-consultation">💬 無料相談はこちらから</a>
 
-        <!-- 🏠 サイトのトップページ、または最上部へ戻るためのリンク（LPの絶対URLや「#」を設定） -->
-        <a href="#" class="btn-base btn-back-top">🏠 Office Care Lab トップページへ戻る</a>
+        <!-- 🏠 トップページへ戻る：別ファイル index.html へ確実に遷移させます -->
+        <a href="index.html" class="btn-base btn-back-top">🏠 トップページへ戻る</a>
     </div>
 
     <!-- ナビゲーション用の余白 -->
@@ -743,10 +738,9 @@
         const countDisplay = document.getElementById('checkedCount');
         const statusBadge = document.getElementById('statusBadge');
 
-        // 各選択カードに直接クリックイベントを設定（100%動作保証）
+        // 各選択カードに直接クリックイベントを設定
         cards.forEach(card => {
             card.addEventListener('click', function(e) {
-                // カード内の他のテキスト選択などの意図しない挙動を防止
                 e.preventDefault();
                 
                 // クラスをトグル（ON/OFF切り替え）
