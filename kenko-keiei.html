@@ -324,8 +324,52 @@
             color: #ffffff;
         }
 
+        /* 🚪 フッター・アクションボタンエリア */
+        .footer-action-area {
+            margin-top: 40px;
+            padding: 24px 0;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn-base {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        /* 無料相談ボタン（メイン・目立つ緑） */
+        .btn-consultation {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+        }
+        .btn-consultation:hover {
+            background-color: #0fa86b;
+            transform: translateY(-1px);
+        }
+        /* トップページに戻るボタン（サブ・落ち着いたグレー） */
+        .btn-back-top {
+            background-color: #ffffff;
+            color: var(--dark-color);
+            border: 1px solid #cbd5e1;
+        }
+        .btn-back-top:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-1px);
+        }
+
+        /* カウンターバーに隠れないための余白 */
         .padding-bottom-space {
-            height: 70px;
+            height: 90px;
         }
 
         /* 💻 PC閲覧用のレイアウト調整 */
@@ -335,6 +379,8 @@
             .task-name { font-size: 15px; }
             .task-desc { font-size: 12.5px; }
             .solution-box { font-size: 12px; padding: 12px 14px; }
+            .footer-action-area { flex-direction: row-reverse; }
+            .footer-action-area .btn-base { flex: 1; font-size: 16px; }
             .counter-sticky-bar {
                 max-width: 380px;
                 left: auto;
@@ -439,7 +485,7 @@
             </div>
         </div>
 
-        <!-- 🟢 お任せ 3（アップデート） -->
+        <!-- 🟢 お任せ 3 -->
         <div class="task-card partner-clear select-item">
             <div class="circle-check">✓</div>
             <div class="badge-container"><span class="status-badge optional">選択</span></div>
@@ -464,7 +510,7 @@
                 <div class="solution-box">
                     <div class="sol-title">🤝 Office Care Labのサポート内容</div>
                     <div>当社の「上級心理カウンセラー」が、部下の異変を察知する「ラインケア（管理職向け）メンタル衛生・労務セミナー」を出張またはオンラインで実施します。</div>
-                    <div class="sol-result"><b>💡 解決結果：</b>研修実施記録と講義テキストがそのまま公式な実績エビデンスになります。</div>
+                    <div class="sol-result"><b>💡 解決結果：</b>研修実施記録と講義テキストがそのまま公式な実績エビエンスになります。</div>
                 </div>
             </div>
         </div>
@@ -628,7 +674,7 @@
             </div>
         </div>
 
-        <!-- 🟢 お任せ 16（バグ修正済） -->
+        <!-- 🟢 お任せ 16 -->
         <div class="task-card partner-clear select-item">
             <div class="circle-check">✓</div>
             <div class="badge-container"><span class="status-badge optional">選択</span></div>
@@ -658,6 +704,13 @@
             </div>
         </div>
 
+    </div>
+
+    <!-- 🚪 フッター・アクションボタンエリア -->
+    <div class="footer-action-area">
+        <!-- ※ href 属性のリンク先（#）は実際のURLに変更してください -->
+        <a href="#" class="btn-base btn-consultation">💬 パッケージ導入についての無料相談はこちら</a>
+        <a href="/" class="btn-base btn-back-top">🏠 Office Care Lab トップページへ戻る</a>
     </div>
 
     <!-- ナビゲーション用の余白 -->
