@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康経営優良法人2026 認定取得サポート体制 | Office Care Lab</title>
+    <style>
+        /* 🎨 デザインシステム設定 */
+        :root {
+            --primary-color: #14cc83;      /* テーマ：ミントグリーン */
+            --primary-light: #e6fcf5;     /* クリア可能項目の背景 */
+            --primary-border: #a3eccd;    /* クリア可能項目の枠線 */
+            --dark-color: #2c3440;        /* 高級感のある墨色 */
+            --text-muted: #64748b;        /* 補足用グレー */
+            --bg-gray: #f8fafc;           /* 薄い背景グレー */
+            --required-color: #ef4444;    /* 必須バッジ（赤） */
+            --optional-color: #3b82f6;    /* 任意バッジ（青） */
+            --new-color: #f59e0b;         /* 新設バッジ（オレンジ） */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            color: var(--dark-color);
+            background-color: #fcfdfd;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            box-sizing: border-box;
+        }
+
+        /* 🌅 ヘッダーデザイン */
+        .page-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #e6fcf5 100%);
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        .page-header .sub {
+            font-size: 13px;
+            color: var(--primary-color);
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .page-header h1 {
+            font-size: 24px;
+            margin: 0 0 14px 0;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+        .page-header p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* 📊 カウンター固定バー（画面下部に追従・スマホ重視） */
+        .counter-sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(44, 52, 64, 0.95);
+            color: #ffffff;
+            padding: 14px 16px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(8px);
+        }
+        .counter-title {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .counter-display {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .counter-number {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 900;
+            margin: 0 4px;
+            font-family: Arial, sans-serif;
+            transition: color 0.3s;
+        }
+        .counter-number.achieved {
+            color: #5eead4;
+            text-shadow: 0 0 10px rgba(94,234,212,0.6);
+        }
+        .status-msg {
+            font-size: 11px;
+            background-color: #475569;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .status-msg.clear {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            font-weight: bold;
+        }
+
+        /* 🤝 パートナーシップ訴求 */
+        .cta-premium-box {
+            background-color: #ffffff;
+            border: 2px solid var(--primary-color);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 12px 30px rgba(20,204,131,0.06);
+        }
+        .cta-premium-box h2 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin: 0 0 12px 0;
+            font-weight: bold;
+        }
+        .cta-premium-box p {
+            font-size: 14px;
+            margin: 0 0 16px 0;
+            color: #475569;
+            text-align: justify;
+        }
+        .cta-premium-box .highlight-text {
+            background: linear-gradient(transparent 65%, #dbf9ee 65%);
+            font-weight: bold;
+            color: #0fa86b;
+        }
+        .cta-badge-summary {
+            background-color: var(--bg-gray);
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 13.5px;
+            font-weight: bold;
+            color: var(--dark-color);
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+            line-height: 1.6;
+        }
+
+        /* 🗺️ 凡例表示 */
+        .legend-card {
+            background-color: var(--bg-gray);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 32px;
+            font-size: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .legend-title {
+            font-weight: bold;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .legend-flex {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color-block {
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-light);
+            border: 1px solid var(--primary-border);
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        /* 🏷️ セクション区切り */
+        .cat-title {
+            font-size: 16px;
+            font-weight: 800;
+            padding: 8px 12px;
+            background-color: var(--dark-color);
+            color: #ffffff;
+            border-radius: 6px;
+            margin: 36px 0 16px 0;
+            display: inline-block;
+        }
+        .cat-sub-heading {
+            font-size: 14px;
+            font-weight: bold;
+            color: #475569;
+            margin: 16px 0 8px 0;
+            padding-left: 6px;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        /* 📝 リスト構造（携帯用タップエリア） */
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        /* ラベル要素にしてカード全体をタップ可能に */
+        .task-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        
+        /* 隠しチェックボックス */
+        .task-checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        /* ✨ 当社が直接解決・支援できる項目（デフォルトのミントグリーン表示） */
+        .task-card.partner-clear {
+            background-color: var(--primary-light);
+            border-color: var(--primary-border);
+        }
+
+        /* 👑 チェックされた時のスタイル変更 */
+        .task-card:has(.task-checkbox:checked) {
+            background-color: #f0fdf4 !important;
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 4px 12px rgba(20,204,131,0.1);
+        }
+
+        /* バッジ（必須・選択・新設） */
+        .badge-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+        .status-badge {
+            font-size: 10px;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: #ffffff;
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+        .status-badge.required { background-color: var(--required-color); }
+        .status-badge.optional { background-color: var(--optional-color); }
+        .status-badge.new { background-color: var(--new-color); }
+
+        /* テキストレイアウト */
+        .task-content {
+            flex: 1;
+        }
+        .task-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .task-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* 当社ソリューションの特別インフォ線 */
+        .partner-solution-tag {
+            display: block;
+            font-size: 11px;
+            color: #0fa86b;
+            font-weight: bold;
+            margin-top: 6px;
+            background-color: #ffffff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px dashed var(--primary-border);
+            line-height: 1.4;
+        }
+
+        /* チェック風丸アイコンの再現（CSS擬似スタイル） */
+        .circle-check {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            flex-shrink: 0;
+            font-size: 11px;
+            color: transparent;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        /* チェックボックスがONのとき、丸アイコンを緑にする */
+        .task-checkbox:checked ~ .circle-check {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* 下部ナビゲーション分の余白確保 */
+        .padding-bottom-space {
+            height: 80px;
+        }
+
+        /* 💻 パソコン環境調整 */
+        @media (min-width: 768px) {
+            .container { padding: 40px 24px 24px 24px; }
+            .page-header h1 { font-size: 30px; }
+            .page-header p { font-size: 14px; }
+            .task-name { font-size: 15px; }
+            .task-desc { font-size: 13px; }
+            .counter-sticky-bar {
+                max-width: 400px;
+                left: auto;
+                right: 24px;
+                bottom: 24px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 🌅 ヘッダー -->
+    <div class="page-header">
+        <div class="sub">Health & Productivity Management 2026</div>
+        <h1>健康経営優良法人2026<br>中小規模法人部門 認定チェッカー</h1>
+        <p>必須項目（4大目標/7要素）の確認と、17の選択項目シミュレーター</p>
+    </div>
+
+    <!-- 🤝 当社と契約したらすべてをクリアできる訴求 -->
+    <div class="cta-premium-box">
+        <h2>🤝 Office Care Labなら、新基準「8項目以上」の壁も単独突破可能</h2>
+        <p>最新の「健康経営優良法人2026」基準では、社会情勢を反映した新設項目が加わり、選択項目のクリアノルマが【17項目中 8項目以上】へと引き上げられました。自社でゼロから新しい施策やマニュアルを作るのは大きな負担となります。ですが、<span class="highlight-text">Office Care Labにお任せいただければ、当社の出張施術・専門ノウハウ（栄養・衛生・運動・メンタル）を組み込むだけで、なんと選択項目から「7項目」を一挙に一括代行クリア</span>いたします！</p>
+        <div class="cta-badge-summary">🏆 当社支援メニューだけで【選択7項目】をカバー！<br>自社で対応する項目を最小限に抑え、8項目以上の新基準をらくらくクリアできます。</div>
+    </div>
+
+    <!-- 🗺️ 凡例 -->
+    <div class="legend-card">
+        <div class="legend-title">カラーガイド</div>
+        <div class="legend-flex">
+            <div class="legend-color-block"></div>
+            <div><b>ミントグリーンの項目</b> ➔ 当社の「企業出張施術」「専門監修マニュアル提供」「相談窓口パッケージ」で対応可能な項目です。</div>
+        </div>
+    </div>
+
+    <!-- ==================== 🟥 必須項目セクション ==================== -->
+    <div class="cat-title">🟥 必須項目（4大項目・7つの取り組み／すべて実施必須）</div>
+    <p style="font-size: 12px; color: var(--text-muted); margin: 0 0 12px 4px;">※必須項目はカウントの対象外です。すべて実施する必要があります。</p>
+    
+    <div class="list-container">
+        
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【経営理念】健康宣言事業への参加</div>
+                <p class="task-desc">加入している保険者（協会けんぽや健康保険組合など）が実施している「健康宣言」事業に公式に参加・エントリーしていること。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【組織体制】健康づくり担当者の設置</div>
+                <p class="task-desc">社内に健康経営を推進するための責任者、または担当者を明確に配置していること。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【評価・改善】40歳以上の健診データの提供</div>
+                <p class="task-desc">従業員（40歳以上）の定期健康診断データを、加入している保険者（協会けんぽ等）へ適切に提供していること。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【法令遵守】定期健診実施率100%</div>
+                <p class="task-desc">全従業員に対して定期健康診断を確実に実施し、受診率100%を維持していること。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【法令遵守】健診後の保健指導・40歳未満の健診</div>
+                <p class="task-desc">健診結果に基づき、必要な従業員へ保健指導の機会を確保、および40歳未満の健診環境を整備していること。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="mandatory-checkbox" checked disabled>
+            <div class="circle-check" style="background-color: #cbd5e1; border-color: #cbd5e1; color: white;">✓</div>
+            <div class="badge-container"><span class="status-badge required">必須</span></div>
+            <div class="task-content">
+                <div class="task-name">【法令遵守】適切な受動喫煙対策</div>
+                <p class="task-desc">屋内完全禁煙や、適切な喫煙専用室の設置など、社内における受動喫煙防止対策を講じていること。</p>
+            </div>
+        </label>
+
+    </div>
+
+    <!-- ==================== 🟦 選択項目セクション ==================== -->
+    <div class="cat-title">🟦 選択項目（17項目中 8項目以上必須）</div>
+    <p style="font-size: 13px; color: #475569; margin: 0 0 12px 4px;">👇 タップしてチェックを入れると、下のカウンターが連動して増えます！</p>
+    
+    <!-- 分類1 -->
+    <div class="cat-sub-heading">▼ 健康課題の把握・環境整備</div>
+    <div class="list-container">
+        
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">1. 定期健診受診率向上への取り組み</div>
+                <p class="task-desc">未受診者への個別勧奨や、業務時間内の受診を認めるなど受診しやすい環境を整えているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">2. 保健指導の環境整備</div>
+                <p class="task-desc">特定保健指導の実施場所を提供したり、就業時間内の面談実施を認めるなど協力しているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">3. 50人未満の事業場でのストレスチェックの実施</div>
+                <p class="task-desc">法的な実施義務のない「従業員50人未満」の事業場においても、ストレスチェックを自主的に実施しているか。</p>
+            </div>
+        </label>
+
+        <!-- 🌟 当社でクリア可能（管理職研修） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">4. 健康増進・過重労働防止に向けた管理職研修</div>
+                <p class="task-desc">管理監督者（マネージャー層）に対し、部下のメンタルヘルスや労働時間管理に関する教育・研修を行っているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：上級心理カウンセラーによる「ラインケア（管理職向け）メンタル衛生セミナー」を出張またはオンラインで開催。実績エビデンスを即時構築できます。</span>
+            </div>
+        </label>
+
+        <!-- 🌟 当社でクリア可能（従業員研修） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check) ">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">5. 従業員への健康情報提供や研修の実施</div>
+                <p class="task-desc">一般従業員に対し、健康への意識を高めるための情報発信や、健康関連の各種研修・講座を定期的に行っているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：プロの施術者が教える「デスクワーク疲労回復・セルフストレッチ講座」の実施、または健康情報の定期チラシ・メルマガ素材を提供します。</span>
+            </div>
+        </label>
+
+    </div>
+
+    <!-- 分類2 -->
+    <div class="cat-sub-heading">▼ 従業員の健康行動の変容支援</div>
+    <div class="list-container">
+
+        <!-- 🌟 当社でクリア可能（食生活の改善） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">6. 食生活の改善に向けた取り組み</div>
+                <p class="task-desc">社内でのヘルシー食の導入や、栄養指導、食生活改善に関する具体的な情報発信を行っているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：整骨院の栄養指導ノウハウと伝統的な食文化知識を詰め込んだ「健康レシピ・栄養ワンポイントニュースレター」を提供。企業様は社内チャット等で共有するだけでクリア！</span>
+            </div>
+        </label>
+
+        <!-- 🌟 当社でクリア可能（運動機会） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">7. 運動機会の増進</div>
+                <p class="task-desc">日常の運動習慣化に向け、ストレッチタイムの導入やウォーキングイベント、その他運動機会の創出を行っているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：定期出張施術に加え、訪問時に「デスクで座ったまま3分でできる肩こり解消ストレッチ」のミニ講座をその場で実施。イベント実績としてそのまま認められます。</span>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">8. 禁煙対策</div>
+                <p class="task-desc">就業時間内の完全禁煙化、禁煙パッチ等の購入費用補助、または禁煙セミナーなどを実施しているか。</p>
+            </div>
+        </label>
+
+        <!-- 🌟 当社でクリア可能（感染症予防） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">9. 感染症予防</div>
+                <p class="task-desc">インフルエンザ予防接種の費用補助や、オフィス内でのプロレベルの感染症予防対策を講じているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：衛生管理のプロである治療院視点で、御社オフィスの配置をチェック。当社監修の「オフィス安心感染症対策マニュアル」をそのまま提供し、外部専門家連携の実績となります。</span>
+            </div>
+        </label>
+
+        <!-- 🌟 当社でクリア可能（心の健康づくり） -->
+        <label class="task-card partner-clear">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">10. 心の健康づくり（メンタルケア窓口）</div>
+                <p class="task-desc">ストレスチェックの実施にとどまらず、日常の悩みを相談できるメンタルヘルス相談窓口を社内外に設けているか。</p>
+                <span class="partner-solution-tag">✨ 当社が解決：当社の「上級心理カウンセラー」が、御社専用の外部メンタルカウンセリングホットライン窓口として機能。自社で窓口を作る手惑いを完全にカットします。</span>
+            </div>
+        </label>
+
+    </div>
+
+    <!-- 分類3 -->
+    <div class="cat-sub-heading">▼ 適正な働き方・両立支援</div>
+    <div class="list-container">
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">11. 適切な働き方の実現</div>
+                <p class="task-desc">時間外労働（残業時間）の大幅削減への具体的な取り組みや、有給休暇の計画的取得の促進を行っているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">12. コミュニケーションの促進</div>
+                <p class="task-desc">社内イベント、サークル活動への補助、または部署の垣根を越えた1on1の実施など交流の場を提供しているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">13. 病気の治療と仕事の両立支援</div>
+                <p class="task-desc">がん、不妊治療、その他慢性疾患を抱える従業員が柔軟に働けるよう、時間単位有給や特別な復職・時短勤務制度があるか。</p>
+            </div>
+        </label>
+
+        <!-- 🌟 【2026年新設！】両立支援項目 -->
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span><span class="status-badge new">新設</span></div>
+            <div class="task-content">
+                <div class="task-name">14. 仕事と育児・介護の両立支援</div>
+                <p class="task-desc">育児休業の取得促進（特に男性）や、家族の介護に直面したシニア・ミドル世代が離職せず働き続けられる独自の社内制度・カウセリングがあるか。</p>
+            </div>
+        </label>
+
+    </div >
+
+    <!-- 分類4 -->
+    <div class="cat-sub-heading">▼ その他・未来の健康課題</div>
+    <div class="list-container">
+
+        <!-- 🌟 【2026年新設！】高齢者項目 -->
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span><span class="status-badge new">新設</span></div>
+            <div class="task-content">
+                <div class="task-name">15. 高年齢従業員の健康や体力状況に応じた取り組み</div>
+                <p class="task-desc">定年延長やシニア層の雇用増に伴い、高年齢従業員の身体的な身体特性に配慮した環境整備や体力測定、労災防止施策を行っているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">16. 生産性低下（プレゼンティーズム等）の測定</div>
+                <p class="task-desc">出勤はしているものの、肩こり・腰痛や頭痛などの体調不良で業務効率が落ちている度合いをアンケート調査等で可視化しているか。</p>
+            </div>
+        </label>
+
+        <label class="task-card">
+            <input type="checkbox" class="task-checkbox">
+            <div class="circle-check">✓</div>
+            <div class="badge-container"><span class="status-badge optional">選択</span></div>
+            <div class="task-content">
+                <div class="task-name">17. 自社独自の健康経営の評価・見直し</div>
+                <p class="task-desc">自社独自の目標数値を定め、前年の活動結果について経営層・取締役会で毎年振り返りと改善プランの見直しを行っているか。</p>
+            </div>
+        </label>
+
+    </div>
+
+    <!-- ナビゲーション用の余白 -->
+    <div class="padding-bottom-space"></div>
+
+    <!-- 📊 カウンター固定バー（画面下部） -->
+    <div class="counter-sticky-bar">
+        <div class="counter-title">
+            選択項目 達成状況
+            <span id="statusBadge" class="status-msg">あと8項目</span>
+        </div>
+        <div class="counter-display">
+            選択項目: <span id="checkedCount" class="counter-number">0</span> / 17
+        </div>
+    </div>
+
+</div>
+
+<!-- ⚙️ JavaScript: リアルタイム加算プログラム -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.task-checkbox');
+        const countDisplay = document.getElementById('checkedCount');
+        const statusBadge = document.getElementById('statusBadge');
+
+        function updateCounter() {
+            // チェックされている数を算出
+            const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+            
+            // 数値表示を更新
+            countDisplay.textContent = checkedCount;
+
+            // 8項目以上でステータス変化
+            if (checkedCount >= 8) {
+                countDisplay.classList.add('achieved');
+                statusBadge.textContent = '基準クリア！🎉';
+                statusBadge.classList.add('clear');
+            } else {
+                countDisplay.classList.remove('achieved');
+                const remaining = 8 - checkedCount;
+                statusBadge.textContent = `あと ${remaining} 項目`;
+                statusBadge.classList.remove('clear');
+            }
+        }
+
+        // すべてのチェックボックスにイベントを紐付け
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateCounter);
+        });
+
+        // 初期実行
+        updateCounter();
+    </script>
+</body>
+</html>
