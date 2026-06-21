@@ -1195,3 +1195,113 @@ footer {
         height: 32px !important; /* ロゴも少しだけコンパクトにして余白を確保 */
     }
 }
+/* ===================================================
+   🚀 健康経営チェッカー 画面いっぱいのメガボタンCSS
+=================================================== */
+.checker-mega-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 28px 12px; /* 携帯閲覧時、左右に程よい余白を作る */
+    text-align: center;
+    margin: 16px auto;
+    clear: both; /* 前後の回り込みを解除して中央配置を確実にする */
+}
+
+.checker-mega-sub {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0fa86b;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+/* 📱 携帯で見ると画面ほぼ全体を占める超特大ボタン */
+.checker-mega-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* 画面横幅いっぱいに広げる */
+    padding: 22px 16px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #14cc83 0%, #0fa86b 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: bold;
+    box-shadow: 0 8px 24px rgba(20, 204, 131, 0.35);
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* ボタン内の目立つタグ */
+.btn-flash-tag {
+    font-size: 11px;
+    background-color: #ef4444; /* 心理的に「おっ」と思わせるアクセントの赤 */
+    color: #ffffff;
+    padding: 3px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ご指定のメインテキスト */
+.btn-main-title {
+    font-size: 19px; /* 携帯で1行〜2行で綺麗に収まる絶妙なサイズ */
+    line-height: 1.4;
+    margin-bottom: 6px;
+    font-weight: 800;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* 後押しする補足テキスト */
+.btn-sub-desc {
+    font-size: 12.5px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.checker-mega-caption {
+    font-size: 11px;
+    color: #64748b;
+    margin: 10px 0 0 0;
+    line-height: 1.4;
+}
+
+/* 💻 PC閲覧用のレイアウト自動調整（横に広がりすぎて間伸びするのを防ぐ） */
+@media (min-width: 768px) {
+    .checker-mega-container {
+        padding: 36px 24px;
+    }
+    .checker-mega-btn {
+        max-width: 650px; /* PCでは押しやすい適切な上限サイズに制限し中央配置 */
+        margin: 0 auto;
+        padding: 26px 24px;
+    }
+    .btn-main-title {
+        font-size: 24px; /* PCは大画面なのでさらに大きく */
+    }
+    .btn-sub-desc {
+        font-size: 14px;
+    }
+    .checker-mega-sub {
+        font-size: 15px;
+    }
+}
+
+/* 🔄 自然と目がいく、微かに脈打つアニメーション効果 */
+@keyframes pulseEffect {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.015); box-shadow: 0 10px 28px rgba(20, 204, 131, 0.45); }
+}
+.checker-mega-btn {
+    animation: pulseEffect 3s infinite ease-in-out;
+}
+.checker-mega-btn:hover {
+    background: linear-gradient(135deg, #17de90 0%, #10b875 100%);
+    transform: translateY(-2px);
+}
