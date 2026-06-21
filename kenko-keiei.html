@@ -18,6 +18,11 @@
             --new-color: #f59e0b;         /* 新設バッジ（オレンジ） */
         }
 
+        /* 🌟 スムーズなスクロール効果を追加 */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             color: var(--dark-color);
@@ -708,14 +713,11 @@
 
     <!-- 🚪 フッター・アクションボタンエリア -->
     <div class="footer-action-area">
-        <!-- 💡 メールでお問い合わせを受ける場合（送信先アドレス、件名、本文を自動挿入） -->
-        <a href="mailto:info@example.com?subject=健康経営優良法人パッケージについての無料相談&body=【企業名】%0d%0a【担当者名】%0d%0a【お電話番号】%0d%0a%0d%0aお問い合わせ内容をご記入ください：" class="btn-base btn-consultation">💬 パッケージ導入についての無料相談はこちら</a>
-        
-        <!-- 💡 LP内の「お問い合わせフォーム（#contact）」へジャンプさせたい場合は、下のコードに書き換えてください -->
-        <!-- <a href="#contact" class="btn-base btn-consultation">💬 パッケージ導入についての無料相談はこちら</a> -->
+        <!-- 💡 費用最下部ボタンと同様に、LP内のお問い合わせエリア（#contact）へスムーズにスクロール移動させます -->
+        <a href="#contact" class="btn-base btn-consultation">💬 パッケージ導入についての無料相談はこちら</a>
 
-        <!-- 🏠 ドメインのトップページ（ルート相対パス）を指定 -->
-        <a href="/" class="btn-base btn-back-top">🏠 Office Care Lab トップページへ戻る</a>
+        <!-- 🏠 サイトのトップページ、または最上部へ戻るためのリンク（LPの絶対URLや「#」を設定） -->
+        <a href="#" class="btn-base btn-back-top">🏠 Office Care Lab トップページへ戻る</a>
     </div>
 
     <!-- ナビゲーション用の余白 -->
@@ -744,7 +746,7 @@
         // 各選択カードに直接クリックイベントを設定（100%動作保証）
         cards.forEach(card => {
             card.addEventListener('click', function(e) {
-                // カード内のリンク等の誤動作を防ぐ
+                // カード内の他のテキスト選択などの意図しない挙動を防止
                 e.preventDefault();
                 
                 // クラスをトグル（ON/OFF切り替え）
