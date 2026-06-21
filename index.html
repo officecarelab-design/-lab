@@ -95,17 +95,100 @@
                 料金プランを見る ➔
             </a>
         </div>
-<!-- 🚀 【新規追加】健康経営チェッカーへの誘導メガボタン -->
-<div class="checker-mega-container">
-    <div class="checker-mega-sub">＼ 2026年最新基準に完全対応！登録不要 ／</div>
-    <a href="kenko-keiei.html" class="checker-mega-btn">
-        <span class="btn-flash-tag">カンタン30秒で判定</span>
-        <span class="btn-main-title">健康系優良法人2026 認定チェッカー</span>
-        <span class="btn-sub-desc">自社のクリア状況を今すぐ無料でシミュレーションする ＞</span>
+<style>
+    /* ボタンのデザイン設定 */
+    .mega-checker-wrapper {
+        width: 100%;
+        padding: 40px 16px; /* 上下の余白 */
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #f8fafc; /* 背景を少しグレーにしてボタンを際立たせる */
+    }
+
+    .mega-checker-sub-title {
+        display: block;
+        font-size: 14px;
+        font-weight: 800;
+        color: #0fa86b;
+        margin-bottom: 12px;
+    }
+
+    /* 📱 画面いっぱいの巨大ボタン本体 */
+    .mega-checker-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px; /* 横幅が広くなりすぎないよう調整 */
+        margin: 0 auto;
+        padding: 24px 20px;
+        background: linear-gradient(135deg, #14cc83 0%, #0fa86b 100%);
+        border-radius: 20px; /* 角を丸く */
+        text-decoration: none !important; /* 下線を消す */
+        box-shadow: 0 10px 25px rgba(20, 204, 131, 0.4); /* ふわっとした影 */
+        transition: transform 0.2s ease;
+        box-sizing: border-box;
+    }
+
+    /* ボタン内の赤タグ */
+    .mega-checker-tag {
+        background-color: #ff4d4d;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        padding: 3px 12px;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* メインの文字 */
+    .mega-checker-main-text {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* 補足の文字 */
+    .mega-checker-sub-text {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .mega-checker-note {
+        font-size: 11px;
+        color: #64748b;
+        margin-top: 15px;
+    }
+
+    /* 動きのアニメーション */
+    .mega-checker-button:active {
+        transform: scale(0.98); /* 押した時に少し凹む */
+    }
+
+    /* PC用の調整 */
+    @media (min-width: 768px) {
+        .mega-checker-main-text { font-size: 24px; }
+        .mega-checker-sub-title { font-size: 16px; }
+    }
+</style>
+
+<div class="mega-checker-wrapper">
+    <span class="mega-checker-sub-title">＼ 2026年最新基準に完全対応！登録不要 ／</span>
+    
+    <a href="kenko-keiei.html" class="mega-checker-button">
+        <span class="mega-checker-tag">カンタン30秒で判定</span>
+        <span class="mega-checker-main-text">健康系優良法人2026<br>認定チェッカー</span>
+        <span class="mega-checker-sub-text">自社のクリア状況を今すぐ無料でシミュレーション ＞</span>
     </a>
-    <p class="checker-mega-caption">※タップすると判定ページへ移動します。自動で集計されるためお気軽にどうぞ！</p>
+
+    <p class="mega-checker-note">※タップすると判定ページへ移動します。<br>自動で集計されるためお気軽にどうぞ！</p>
 </div>
-    </div>
 
     <style>
         .hero-clean-btn-group {
