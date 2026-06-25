@@ -1195,3 +1195,87 @@ footer {
         height: 32px !important; /* ロゴも少しだけコンパクトにして余白を確保 */
     }
 }
+/* ==========================================================================
+   Office Care Lab専用：洗練されたSEO用テキストデザイン（画像幅連動）
+   ========================================================================== */
+.ocl-steps-text-section {
+    width: 100%;
+    max-width: 960px; /* ★サイト内の画像やコンテンツの標準的な最大幅に合わせます */
+    margin: 30px auto 50px auto;
+    padding: 0 5%; /* スマホ時の左右余白を画像と統一 */
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* パソコン時は綺麗に2列×2行で整列 */
+    gap: 24px;
+}
+
+.ocl-step-card {
+    background: #ffffff;
+    border: 1px solid #d3ebd9; /* サイトのテーマグリーンに合わせた淡い緑 */
+    border-radius: 16px; /* ボタンなどと統一感のある綺麗な角丸 */
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(46, 167, 96, 0.04); /* 柔らかなグリーンの影 */
+    transition: transform 0.3s ease;
+}
+
+.ocl-step-card:hover {
+    transform: translateY(-2px); /* マウスを乗せた時に軽く浮かび上がる上品な演出 */
+}
+
+.ocl-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #f0f7f2; /* 薄いボーダーで区切り */
+    padding-bottom: 10px;
+}
+
+.ocl-step-badge {
+    background: linear-gradient(135deg, #2ea760, #228049); /* 深みのあるオーガニックグリーン */
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px; /* カプセル型のバッジ */
+    letter-spacing: 0.05em;
+}
+
+.ocl-step-card h3 {
+    font-size: 16px;
+    color: #2c3e35; /* 濃い目のアースグリーン */
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.ocl-step-card p {
+    font-size: 13.5px;
+    color: #55615a; /* 読みやすい少しトーンを落としたグレー */
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+/* 横幅の狭いスマートフォン表示（レスポンシブ）の調整 */
+@media (max-width: 768px) {
+    .ocl-steps-text-section {
+        grid-template-columns: 1fr; /* スマホ時は自動で縦1列に綺麗に並ぶ */
+        gap: 16px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .ocl-step-card {
+        padding: 20px;
+    }
+    
+    .ocl-step-card h3 {
+        font-size: 15px;
+    }
+    
+    .ocl-step-card p {
+        font-size: 13px;
+    }
+}
