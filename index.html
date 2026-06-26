@@ -1192,51 +1192,9 @@
     </section>
 
 <!-- ==========================================
-     【完全修正】見出し復活 ＆ フォーム中央寄せ・幅狭め設定
+     【送信機能完全復活】新しいFormspree URL紐付け済みコード
      ========================================== -->
 <div class="ocl-contact-total-container" style="
-    width: 100%;
-    max-width: 960px; /* 🌟 画面全体に広がらないよう幅を制限 */
-    margin: 60px auto 80px auto; /* 🌟 中央寄せ */
-    padding: 0 20px;
-    box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
-">
-
-    <!-- 1. 見出し＆説明文エリア（完全に復活） -->
-    <div style="text-align: center; margin-bottom: 35px;">
-        <span style="
-            font-size: 12px; 
-            color: #b7931a; 
-            font-weight: 700; 
-            background: #fbf8ee; 
-            padding: 4px 12px; 
-            border-radius: 50px; 
-            letter-spacing: 0.05em;
-            display: inline-block;
-            margin-bottom: 10px;
-        ">CONTACT</span>
-        
-        <h2 style="
-            font-size: 24px; 
-            color: #2c3e35; 
-            margin: 0 0 12px 0; 
-            font-weight: 800;
-            line-height: 1.4;
-        ">
-            まずはお気軽にご相談ください
-        </h2>
-        
-        <p style="font-size: 14px; color: #555555; margin: 0 0 6px 0; line-height: 1.6;">
-            貴社の規模やご予算に合わせて、最適なプランをオーダーメイドでご提案いたします。
-        </p>
-        <p style="font-size: 13.5px; color: #2ea760; font-weight: 700; margin: 0;">
-            ※ご相談・お見積もりはすべて無料です。
-        </p>
-    </div>
-
-    <!-- 2. お問い合わせフォーム本体（すっきりと中央に収まるボックス） -->
-    <div class="ocl-contact-total-container" style="
     width: 100%;
     max-width: 960px;
     margin: 60px auto 80px auto;
@@ -1245,6 +1203,7 @@
     font-family: 'Noto Sans JP', sans-serif;
 ">
 
+    <!-- 1. 見出し＆説明文エリア -->
     <div style="text-align: center; margin-bottom: 35px;">
         <span style="
             font-size: 12px; 
@@ -1276,6 +1235,7 @@
         </p>
     </div>
 
+    <!-- 2. お問い合わせフォーム本体（新しいURLを設定完了） -->
     <div class="ocl-contact-form-box" style="
         background: #ffffff;
         border: 1px solid #e5f2e9;
@@ -1284,28 +1244,34 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
     ">
         
-        <form action="https://formspree.io/f/xkoayeyg" method="POST">
+        <!-- 🌟 新しいFormspreeのURLをセットしました -->
+        <form action="https://formspree.io/f/mdargpjb" method="POST">
             
+            <!-- 貴社名 -->
             <div class="ocl-form-group">
                 <label class="ocl-form-label">貴社名／部署名 <span class="ocl-badge-required">必須</span></label>
                 <input type="text" name="company" placeholder="株式会社〇〇 人事労務部" class="ocl-form-input" required>
             </div>
 
+            <!-- ご担当者様氏名 -->
             <div class="ocl-form-group">
                 <label class="ocl-form-label">ご担当者様氏名 <span class="ocl-badge-required">必須</span></label>
                 <input type="text" name="name" placeholder="山田 太郎" class="ocl-form-input" required>
             </div>
 
+            <!-- メールアドレス -->
             <div class="ocl-form-group">
                 <label class="ocl-form-label">メールアドレス <span class="ocl-badge-required">必須</span></label>
                 <input type="email" name="_replyto" placeholder="example@email.com" class="ocl-form-input" required>
             </div>
 
+            <!-- お問い合わせ内容 -->
             <div class="ocl-form-group">
                 <label class="ocl-form-label">お問い合わせ内容 <span class="ocl-badge-required">必須</span></label>
                 <textarea name="message" placeholder="出張施術の導入を検討したい、詳しい資料がほしい、など自由にご記入ください。" class="ocl-form-textarea" required></textarea>
             </div>
 
+            <!-- 送信ボタン -->
             <div style="text-align: center; margin-top: 30px;">
                 <button type="submit" class="ocl-form-submit-btn">
                     この内容で送信する ✉
@@ -1316,6 +1282,7 @@
     </div>
 </div>
 
+<!-- ⚙️ フォームを美しく整える専用スタイル設定（崩れ・はみ出し防止） -->
 <style>
 .ocl-form-group {
     margin-bottom: 24px;
