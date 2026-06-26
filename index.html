@@ -216,7 +216,7 @@
 <!-- ==========================================
      【100%確実に反映】健康経営12項目クリア内訳（洗練された開閉式・アコーディオン版）
      ========================================== -->
-<div class="ocl-seo-accordion-section" style="
+<div class="ocl-seo-single-accordion-section" style="
     width: 100%;
     max-width: 960px;
     margin: 50px auto 60px auto;
@@ -224,197 +224,175 @@
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
 ">
-    <!-- セクションの見出し -->
-    <div style="text-align: center; margin-bottom: 35px;">
-        <span style="font-size: 13px; color: #2ea760; font-weight: 700; background: #eaf6ee; padding: 4px 12px; border-radius: 50px; letter-spacing: 0.05em;">BENEFI</span>
+    <div style="text-align: center; margin-bottom: 25px;">
+        <span style="font-size: 13px; color: #2ea760; font-weight: 700; background: #eaf6ee; padding: 4px 12px; border-radius: 50px; letter-spacing: 0.05em;">BENEFIT</span>
         <h2 style="font-size: 22px; color: #2c3e35; margin: 10px 0 0 0; font-weight: 900; line-height: 1.5;">
             Office Care Labがカバーする<br>
             <span style="color: #b7931a;">健康経営優良法人 認定項目（12項目）</span>
         </h2>
-        <p style="font-size: 13.5px; color: #666666; margin: 8px 0 0 0;">項目をタップすると、具体的な取り組み内容が確認できます。</p>
+        <p style="font-size: 13.5px; color: #666666; margin: 8px 0 0 0;">以下のボタンをタップすると、具体的な適合項目と取り組み内容が一挙に確認できます。</p>
     </div>
 
-    <!-- アコーディオンのリスト（PCは2列、スマホは1列に自動調整） -->
-    <div class="ocl-accordion-grid">
-        
-        <!-- 項目 1 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>定期健診受診率（実質100%）</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>従業員の定期健康診断の受診徹底を促すアナウンス支援や環境づくりをサポートします。</p>
+    <details class="ocl-single-accordion" style="
+        background: #ffffff;
+        border: 2px solid #2ea760; /* テーマグリーンをベースにしたしっかりとした枠線 */
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(46, 167, 96, 0.06);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    ">
+        <summary class="ocl-single-summary" style="
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            background: linear-gradient(to right, #f9fdfa, #ffffff);
+        ">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="width: 24px; height: 24px; background: #2ea760; color: #ffffff; font-size: 14px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center;">📋</span>
+                <span style="font-size: 16px; color: #2c3e35; font-weight: 700; letter-spacing: 0.03em;">対象の適合項目（12項目）の内訳を見る</span>
             </div>
-        </details>
+            <span class="ocl-single-arrow" style="font-size: 12px; color: #2ea760; font-weight: bold; transition: transform 0.3s ease;">▼ タップして開く</span>
+        </summary>
 
-        <!-- 項目 2 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>受診勧奨の取り組み</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>健診結果で再検査・精密検査が必要となった従業員への受診推奨体制を構築します。</p>
+        <div class="ocl-single-content-wrapper" style="
+            padding: 24px;
+            background: #fafdfb;
+            border-top: 1px dashed #d3ebd9;
+        ">
+            <div class="ocl-checklist-responsive-grid">
+                
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>定期健診受診率（実質100%）</h3>
+                        <p>従業員の定期健康診断の受診徹底を促すアナウンス支援や環境づくりをサポートします。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>受診勧奨の取り組み</h3>
+                        <p>健診結果で再検査・精密検査が必要となった従業員への受診推奨体制を構築します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>ストレスチェックの実施</h3>
+                        <p>法定義務に基づくメンタルヘルス不調の未然防止に向け、ストレスチェックの実施を形骸化させず支援します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>管理職へのメンタルヘルス教育</h3>
+                        <p>ラインケアやメンタル不調者の早期発見に向けた、管理職向けの知識共有POPマニュアルを提供します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>一般社員への健康教育</h3>
+                        <p>ヘルスリテラシー向上を目指し、肩こり腰痛予防やセルフケアに関する専門知識を社内に定着させます。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>適切な働き方実現（過重労働防止）</h3>
+                        <p>出張施術を通じたリフレッシュ時間の創出により、長時間労働の抑制や業務効率化の意識を醸成します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>依存症対策（受動喫煙防止など）</h3>
+                        <p>社内の健康増進を目的とした禁煙啓発や受動喫煙防止、各種依存症リスクに関する情報発信を行います。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>食生活の改善に向けた取り組み</h3>
+                        <p>専門家監修の「栄養バランス」「オフィスでの食事選び」に関する健康コラムPOPを定期配信します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card">
+                    <div class="ocl-check-icon">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>運動機会の増進（ストレッチ指導）</h3>
+                        <p>プロの施術師による個別のストレッチ指導やデスクワーク向けの運動導入により、運動不足を解消します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card" style="border-color: #e5c04d !important;">
+                    <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>女性の健康保持・増進</h3>
+                        <p>女性特有の健康課題（更年期症状、月経に伴う不調など）に対する理解促進とケアをサポートします。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card" style="border-color: #e5c04d !important;">
+                    <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>高年齢従業員の健康増進・労災防止</h3>
+                        <p>シニア層の身体機能維持、転倒防止、労働災害（労災）を未然に防ぐための具体的な対策を提供します。</p>
+                    </div>
+                </div>
+
+                <div class="ocl-check-card" style="border-color: #e5c04d !important;">
+                    <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
+                    <div class="ocl-check-text">
+                        <h3>感染症予防対策</h3>
+                        <p>オフィス内での集団感染リスクを抑えるため、季節性ウイルスや感染症予防に関する情報・対策を共有します。</p>
+                    </div>
+                </div>
+
             </div>
-        </details>
-
-        <!-- 項目 3 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>ストレスチェックの実施</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>法定義務に基づくメンタルヘルス不調の未然防止に向け、ストレスチェックの実施を形骸化させず支援します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 4 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>管理職へのメンタルヘルス教育</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>ラインケアやメンタル不調者の早期発見に向けた、管理職向けの知識共有POPマニュアルを提供します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 5 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>一般社員への健康教育</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>ヘルスリテラシー向上を目指し、肩こり腰痛予防やセルフケアに関する専門知識を社内に定着させます。</p>
-            </div>
-        </details>
-
-        <!-- 項目 6 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>適切な働き方実現（過重労働防止）</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>出張施術を通じたリフレッシュ時間の創出により、長時間労働の抑制や業務効率化の意識を醸成します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 7 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>依存症対策（受動喫煙防止など）</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>社内の健康増増進を目的とした禁煙啓発や受動喫煙防止、各種依存症リスクに関する情報発信を行います。</p>
-            </div>
-        </details>
-
-        <!-- 項目 8 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>食生活の改善に向けた取り組み</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>専門家監修の「栄養バランス」「オフィスでの食事選び」に関する健康コラムPOPを定期配信します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 9 -->
-        <details class="ocl-accordion-item">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon">✓</span>
-                <h3>運動機会の増進（ストレッチ指導）</h3>
-                <span class="ocl-acc-arrow">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>プロの施術師による個別のストレッチ指導やデスクワーク向けの運動導入により、運動不足を解消します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 10 -->
-        <details class="ocl-accordion-item" style="border-color: #e5c04d !important;">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon" style="background: #b7931a;">✓</span>
-                <h3>女性の健康保持・増進</h3>
-                <span class="ocl-acc-arrow" style="color: #b7931a;">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>女性特有の健康課題（更年期症状、月経に伴う不調など）に対する理解促進とケアをサポートします。</p>
-            </div>
-        </details>
-
-        <!-- 項目 11 -->
-        <details class="ocl-accordion-item" style="border-color: #e5c04d !important;">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon" style="background: #b7931a;">✓</span>
-                <h3>高年齢従業員の健康増進・労災防止</h3>
-                <span class="ocl-acc-arrow" style="color: #b7931a;">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>シニア層の身体機能維持、転倒防止、労働災害（労災）を未然に防ぐための具体的な対策を提供します。</p>
-            </div>
-        </details>
-
-        <!-- 項目 12 -->
-        <details class="ocl-accordion-item" style="border-color: #e5c04d !important;">
-            <summary class="ocl-accordion-header">
-                <span class="ocl-acc-icon" style="background: #b7931a;">✓</span>
-                <h3>感染症予防対策</h3>
-                <span class="ocl-acc-arrow" style="color: #b7931a;">▼</span>
-            </summary>
-            <div class="ocl-accordion-content">
-                <p>オフィス内での集団感染リスクを抑えるため、季節性ウイルスや感染症予防に関する情報・対策を共有します。</p>
-            </div>
-        </details>
-
-    </div>
+        </div>
+    </details>
 </div>
 
-<!-- 📱 アコーディオン専用の洗練されたスタイル設定 -->
 <style>
-.ocl-accordion-grid {
+.ocl-single-summary::-webkit-details-marker { display: none; }
+.ocl-single-summary { list-style: none; }
+.ocl-single-summary:hover { background: #f2faf4 !important; }
+
+/* 開いた時に矢印の文字を変えて180度回転 */
+.ocl-single-accordion[open] .ocl-single-arrow {
+    transform: rotate(180deg);
+    color: #b7931a !important;
+}
+
+/* 中身の12項目：PC時は美しく3列に整列 */
+.ocl-checklist-responsive-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* PC時は綺麗に左右2列に分けて並べる */
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
-.ocl-accordion-item {
+.ocl-check-card {
     background: #ffffff;
     border: 1px solid #e5f2e9;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(46, 167, 96, 0.02);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-/* 標準の開閉矢印を消す（ブラウザ対応） */
-.ocl-accordion-item summary::-webkit-details-marker { display: none; }
-.ocl-accordion-item summary { list-style: none; }
-
-.ocl-accordion-header {
     padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.01);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
-    cursor: pointer;
-    user-select: none;
 }
-.ocl-accordion-header:hover {
-    background-color: #f9fdfa;
-}
-.ocl-acc-icon {
+.ocl-check-icon {
     flex-shrink: 0;
     width: 22px;
     height: 22px;
@@ -427,52 +405,38 @@
     align-items: center;
     justify-content: center;
 }
-.ocl-accordion-header h3 {
-    flex-grow: 1;
+.ocl-check-text h3 {
     font-size: 14px;
     color: #2c3e35;
-    margin: 0;
+    margin: 2px 0 6px 0;
     font-weight: 700;
     line-height: 1.4;
 }
-.ocl-acc-arrow {
-    font-size: 11px;
-    color: #2ea760;
-    transition: transform 0.3s ease;
-}
-/* 開いた時に▼の向きを180度回転させて▲にする演出 */
-.ocl-accordion-item[open] .ocl-acc-arrow {
-    transform: rotate(180deg);
-}
-.ocl-accordion-content {
-    padding: 0 16px 16px 50px; /* アイコンの幅を避けて文字を綺麗に整列 */
-    background: #ffffff;
-}
-.ocl-accordion-content p {
-    font-size: 12.5px;
+.ocl-check-text p {
+    font-size: 12px;
     color: #66736c;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
-    text-align: justify;
 }
 
-/* 📱 スマートフォンでの見た目の自動調整 */
-@media (max-width: 768px) {
-    .ocl-accordion-grid {
-        grid-template-columns: 1fr; /* スマホ時はスッキリと縦1列に */
+@media (max-width: 900px) {
+    .ocl-checklist-responsive-grid {
+        grid-template-columns: repeat(2, 1fr); /* タブレットは2列 */
+    }
+}
+@media (max-width: 650px) {
+    .ocl-single-summary {
+        padding: 16px 18px !important;
+    }
+    .ocl-single-summary span style {
+        font-size: 14px !important;
+    }
+    .ocl-single-content-wrapper {
+        padding: 16px !important;
+    }
+    .ocl-checklist-responsive-grid {
+        grid-template-columns: 1fr; /* スマホは縦1列 */
         gap: 12px;
-    }
-    .ocl-accordion-header {
-        padding: 14px;
-    }
-    .ocl-accordion-header h3 {
-        font-size: 13.5px;
-    }
-    .ocl-accordion-content {
-        padding: 0 14px 14px 48px;
-    }
-    .ocl-accordion-content p {
-        font-size: 12px;
     }
 }
 </style>
