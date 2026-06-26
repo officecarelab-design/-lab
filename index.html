@@ -227,7 +227,6 @@
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
 ">
-    <!-- セクションの見出し -->
     <div style="text-align: center; margin-bottom: 25px;">
         <span style="font-size: 13px; color: #2ea760; font-weight: 700; background: #eaf6ee; padding: 4px 12px; border-radius: 50px; letter-spacing: 0.05em;">BENEFIT & SEO</span>
         <h2 style="font-size: 22px; color: #2c3e35; margin: 10px 0 0 0; font-weight: 900; line-height: 1.5;">
@@ -237,7 +236,6 @@
         <p style="font-size: 13.5px; color: #666666; margin: 8px 0 0 0;">以下のボタンをタップすると、具体的な適合項目と取り組み内容が一挙に確認できます。</p>
     </div>
 
-    <!-- 1つにまとめた開閉アコーディオン -->
     <details class="ocl-single-accordion" style="
         background: #ffffff;
         border: 2px solid #2ea760;
@@ -246,29 +244,18 @@
         overflow: hidden;
         transition: all 0.3s ease;
     ">
-        <!-- 開閉トリガーとなるボタン部分 -->
-        <summary class="ocl-single-summary" style="
-            padding: 20px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            user-select: none;
-            background: linear-gradient(to right, #f9fdfa, #ffffff);
-        ">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="width: 24px; height: 24px; background: #2ea760; color: #ffffff; font-size: 14px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center;">📋</span>
-                <span style="font-size: 16px; color: #2c3e35; font-weight: 700; letter-spacing: 0.03em;">対象の適合項目（12項目）の内訳を見る</span>
+        <summary class="ocl-single-summary">
+            <div class="ocl-summary-title-area">
+                <span class="ocl-summary-notebook-icon">📋</span>
+                <span class="ocl-summary-title-text">対象の適合項目（12項目）の内訳を見る</span>
             </div>
             
-            <!-- 🌟 文字がひっくり返らない開閉案内テキストエリア -->
-            <div class="ocl-action-text-zone" style="font-size: 12px; font-weight: bold; white-space: nowrap;">
-                <span class="ocl-text-open" style="color: #2ea760;">▼ タップして開く</span>
-                <span class="ocl-text-close" style="color: #b7931a; display: none;">▲ タップして閉じる</span>
+            <div class="ocl-action-text-zone">
+                <span class="ocl-text-open">▼ タップして開く</span>
+                <span class="ocl-text-close">▲ タップして閉じる</span>
             </div>
         </summary>
 
-        <!-- 開いた時に現れる12項目のエリア -->
         <div class="ocl-single-content-wrapper" style="
             padding: 24px;
             background: #fafdfb;
@@ -276,7 +263,6 @@
         ">
             <div class="ocl-checklist-responsive-grid">
                 
-                <!-- 項目 1 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -285,7 +271,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 2 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -294,7 +279,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 3 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -303,7 +287,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 4 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -312,7 +295,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 5 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -321,7 +303,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 6 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -330,7 +311,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 7 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -339,7 +319,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 8 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -348,7 +327,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 9 -->
                 <div class="ocl-check-card">
                     <div class="ocl-check-icon">✓</div>
                     <div class="ocl-check-text">
@@ -357,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 10 -->
                 <div class="ocl-check-card" style="border-color: #e5c04d !important;">
                     <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
                     <div class="ocl-check-text">
@@ -366,7 +343,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 11 -->
                 <div class="ocl-check-card" style="border-color: #e5c04d !important;">
                     <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
                     <div class="ocl-check-text">
@@ -375,7 +351,6 @@
                     </div>
                 </div>
 
-                <!-- 項目 12 -->
                 <div class="ocl-check-card" style="border-color: #e5c04d !important;">
                     <div class="ocl-check-icon" style="background: #b7931a;">✓</div>
                     <div class="ocl-check-text">
@@ -389,20 +364,60 @@
     </details>
 </div>
 
-<!-- 📱 修正版スタイル設定 -->
 <style>
 .ocl-single-summary::-webkit-details-marker { display: none; }
-.ocl-single-summary { list-style: none; }
+.ocl-single-summary {
+    list-style: none;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    background: linear-gradient(to right, #f9fdfa, #ffffff);
+}
 .ocl-single-summary:hover { background: #f2faf4 !important; }
 
-/* 🌟 開閉によって表示する文字を完全に切り替える設定（反転なし） */
-.ocl-single-accordion .ocl-text-open { display: inline; }
-.ocl-single-accordion .ocl-text-close { display: none; }
+.ocl-summary-title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.ocl-summary-notebook-icon {
+    width: 24px;
+    height: 24px;
+    background: #2ea760;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.ocl-summary-title-text {
+    font-size: 16px;
+    color: #2c3e35;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
 
-.ocl-single-accordion[open] .ocl-text-open { display: none; }
-.ocl-single-accordion[open] .ocl-text-close { display: inline; }
+/* 🌟 文字切り替えの仕組み（回転・ひっくり返りを完全廃止） */
+.ocl-action-text-zone {
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.ocl-single-accordion .ocl-text-open { display: inline; color: #2ea760; }
+.ocl-single-accordion .ocl-text-close { display: none; color: #b7931a; }
 
-/* 12項目のレイアウト設定 */
+/* 開いた時 [open] の文字切り替え指示 */
+.ocl-single-accordion[open] .ocl-text-open { display: none !important; }
+.ocl-single-accordion[open] .ocl-text-close { display: inline !important; }
+
+/* 12項目のレイアウト（PC用3列） */
 .ocl-checklist-responsive-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -445,33 +460,47 @@
     margin: 0;
 }
 
+/* 📱 タブレットサイズ（画面幅900px以下） */
 @media (max-width: 900px) {
     .ocl-checklist-responsive-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* 📱 スマートフォンサイズ（画面幅768px以下）での絶対被らない調整 */
 @media (max-width: 768px) {
     .ocl-single-summary {
-        flex-direction: column;
-        align-items: flex-start !important;
+        flex-direction: column; /* 縦並びにして絶対に文字が被らないようにする */
+        align-items: center !important;
+        text-align: center;
         gap: 12px !important;
-        position: relative;
+        padding: 20px 16px !important;
+    }
+    .ocl-summary-title-area {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .ocl-summary-title-text {
+        font-size: 15px;
+        line-height: 1.4;
     }
     .ocl-action-text-zone {
-        position: absolute;
-        top: 20px;
-        right: 18px;
+        margin-top: 4px;
+        background: #f0f9f4; /* スマホ時はボタンらしく背景を薄く敷く */
+        padding: 6px 16px;
+        border-radius: 50px;
+        border: 1px solid #d3ebd9;
     }
-}
-@media (max-width: 650px) {
-    .ocl-single-summary {
-        padding: 16px 18px !important;
+    /* 開いた時のスマホ用背景色変化 */
+    .ocl-single-accordion[open] .ocl-action-text-zone {
+        background: #fbf8ee;
+        border-color: #f5e7c4;
     }
     .ocl-single-content-wrapper {
         padding: 16px !important;
     }
     .ocl-checklist-responsive-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* スマホは1列 */
         gap: 12px;
     }
 }
