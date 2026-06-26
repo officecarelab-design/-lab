@@ -1196,86 +1196,105 @@ footer {
     }
 }
 /* ==========================================================================
-   Office Care Lab専用：洗練されたSEO用テキストデザイン（画像幅連動）
+   Office Care Lab専用：超洗練されたタイムライン型フロー（画像幅完全連動）
    ========================================================================== */
-.ocl-steps-text-section {
+.ocl-timeline-section {
     width: 100%;
-    max-width: 960px; /* ★サイト内の画像やコンテンツの標準的な最大幅に合わせます */
-    margin: 30px auto 50px auto;
-    padding: 0 5%; /* スマホ時の左右余白を画像と統一 */
+    max-width: 960px; /* 既存の画像バナーやボタンの幅と完全に一致させます */
+    margin: 40px auto 60px auto;
+    padding: 0 4%;
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* パソコン時は綺麗に2列×2行で整列 */
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* ステップごとの洗練された間隔 */
 }
 
-.ocl-step-card {
-    background: #ffffff;
-    border: 1px solid #d3ebd9; /* サイトのテーマグリーンに合わせた淡い緑 */
-    border-radius: 16px; /* ボタンなどと統一感のある綺麗な角丸 */
-    padding: 24px;
-    box-shadow: 0 4px 20px rgba(46, 167, 96, 0.04); /* 柔らかなグリーンの影 */
-    transition: transform 0.3s ease;
+.ocl-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    background: linear-gradient(to right, #ffffff, #fcfefe);
+    border-left: 4px solid #2ea760; /* 左側にアクセントとなるグリーンのライン */
+    border-radius: 0 16px 16px 0;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
-.ocl-step-card:hover {
-    transform: translateY(-2px); /* マウスを乗せた時に軽く浮かび上がる上品な演出 */
-}
-
-.ocl-card-header {
+.ocl-timeline-number {
+    flex-shrink: 0;
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, #2ea760, #1b6c3c); /* 奥行きのあるリッチグリーン */
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-    border-bottom: 2px solid #f0f7f2; /* 薄いボーダーで区切り */
-    padding-bottom: 10px;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(46, 167, 96, 0.2);
 }
 
-.ocl-step-badge {
-    background: linear-gradient(135deg, #2ea760, #228049); /* 深みのあるオーガニックグリーン */
+.ocl-timeline-number span {
     color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 50px; /* カプセル型のバッジ */
-    letter-spacing: 0.05em;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.05em;
 }
 
-.ocl-step-card h3 {
-    font-size: 16px;
-    color: #2c3e35; /* 濃い目のアースグリーン */
-    margin: 0;
-    font-weight: 700;
-    line-height: 1.4;
+/* ステップの後半（03, 04）はグラデーションをゴールド系にしてアクセントをつける演出 */
+.ocl-timeline-item:nth-child(3) { border-left-color: #d4af37; }
+.ocl-timeline-item:nth-child(3) .ocl-timeline-number { background: linear-gradient(135deg, #e5c04d, #b7931a); box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2); }
+
+.ocl-timeline-item:nth-child(4) { border-left-color: #d4af37; }
+.ocl-timeline-item:nth-child(4) .ocl-timeline-number { background: linear-gradient(135deg, #e5c04d, #b7931a); box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2); }
+
+.ocl-timeline-content {
+    flex-grow: 1;
 }
 
-.ocl-step-card p {
-    font-size: 13.5px;
-    color: #55615a; /* 読みやすい少しトーンを落としたグレー */
-    line-height: 1.7;
+.ocl-timeline-content h3 {
+    font-size: 18px;
+    color: #2c3e35;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.ocl-timeline-content p {
+    font-size: 14px;
+    color: #55615a;
+    line-height: 1.75;
     margin: 0;
     text-align: justify;
 }
 
-/* 横幅の狭いスマートフォン表示（レスポンシブ）の調整 */
+/* 📱 スマートフォン表示（レスポンシブ）時の完璧な美しさへの調整 */
 @media (max-width: 768px) {
-    .ocl-steps-text-section {
-        grid-template-columns: 1fr; /* スマホ時は自動で縦1列に綺麗に並ぶ */
+    .ocl-timeline-section {
+        gap: 20px;
+        margin: 30px auto 40px auto;
+    }
+    
+    .ocl-timeline-item {
         gap: 16px;
-        margin-top: 20px;
-        margin-bottom: 40px;
+        padding: 16px 20px;
     }
     
-    .ocl-step-card {
-        padding: 20px;
+    .ocl-timeline-number {
+        width: 42px;
+        height: 42px;
     }
     
-    .ocl-step-card h3 {
+    .ocl-timeline-number span {
+        font-size: 16px;
+    }
+    
+    .ocl-timeline-content h3 {
         font-size: 15px;
+        margin-bottom: 6px;
     }
     
-    .ocl-step-card p {
+    .ocl-timeline-content p {
         font-size: 13px;
+        line-height: 1.6;
     }
 }
