@@ -1243,126 +1243,182 @@
             <h3 style="font-size: 20px; color: #2c3e35; margin: 8px 0 0 0; font-weight: 800;">運営組織概要</h3>
         </div>
 
-        <!-- 会社概要テーブル -->
-        <table class="ocl-info-table" style="width: 100%; border-collapse: collapse; background: #ffffff; box-shadow: 0 4px 15px rgba(0,0,0,0.01); border-radius: 8px; overflow: hidden;">
-            <tbody>
-                <tr>
-                    <th>組織名 / サービス名</th>
-                    <td>Office Care Lab（オフィスケアラボ）</td>
-                </tr>
-                <tr>
-                    <th>所在地</th>
-                    <td>〒543-0014 大阪市天王寺区玉造元町12-2 パルコア真田山1F</td>
-                </tr>
-                <tr>
-                    <th>代表者</th>
-                    <td>近藤 祐樹</td>
-                </tr>
-                <tr>
-                    <th>電話番号</th>
-                    <td><a href="tel:0667778131" style="color: #2ea760; text-decoration: none; font-weight: 700;">06-6777-8131</a></td>
-                </tr>
-                <tr>
-                    <th>営業時間</th>
-                    <td>12:00～21:00</td>
-                </tr>
-                <tr>
-                    <th>事業内容</th>
-                    <td>
-                        ・企業向け出張施術（整体・ストレッチ指導・鍼灸マッサージ）<br>
-                        ・健康経営優良法人 認定取得に伴う各種ヘルスケア支援サービス<br>
-                        ・働く世代への健康増進施術・コンサルティング
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<!-- ==========================================
+     【完全修正】見出し復活 ＆ フォーム中央寄せ・幅狭め設定
+     ========================================== -->
+<div class="ocl-contact-total-container" style="
+    width: 100%;
+    max-width: 960px; /* 🌟 画面全体に広がらないよう幅を制限 */
+    margin: 60px auto 80px auto; /* 🌟 中央寄せ */
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+">
+
+    <!-- 1. 見出し＆説明文エリア（完全に復活） -->
+    <div style="text-align: center; margin-bottom: 35px;">
+        <span style="
+            font-size: 12px; 
+            color: #b7931a; 
+            font-weight: 700; 
+            background: #fbf8ee; 
+            padding: 4px 12px; 
+            border-radius: 50px; 
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 10px;
+        ">CONTACT</span>
+        
+        <h2 style="
+            font-size: 24px; 
+            color: #2c3e35; 
+            margin: 0 0 12px 0; 
+            font-weight: 800;
+            line-height: 1.4;
+        ">
+            まずはお気軽にご相談ください
+        </h2>
+        
+        <p style="font-size: 14px; color: #555555; margin: 0 0 6px 0; line-height: 1.6;">
+            貴社の規模やご予算に合わせて、最適なプランをオーダーメイドでご提案いたします。
+        </p>
+        <p style="font-size: 13.5px; color: #2ea760; font-weight: 700; margin: 0;">
+            ※ご相談・お見積もりはすべて無料です。
+        </p>
     </div>
 
+    <!-- 2. お問い合わせフォーム本体（すっきりと中央に収まるボックス） -->
+    <div class="ocl-contact-form-box" style="
+        background: #ffffff;
+        border: 1px solid #e5f2e9;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    ">
+        
+        <!-- フォームの実際の入力項目（HTML構造） -->
+        <form>
+            <!-- 貴社名 -->
+            <div class="ocl-form-group">
+                <label class="ocl-form-label">貴社名／部署名 <span class="ocl-badge-required">必須</span></label>
+                <input type="text" placeholder="株式会社〇〇 人事労務部" class="ocl-form-input">
+            </div>
+
+            <!-- ご担当者様氏名 -->
+            <div class="ocl-form-group">
+                <label class="ocl-form-label">ご担当者様氏名 <span class="ocl-badge-required">必須</span></label>
+                <input type="text" placeholder="山田 太郎" class="ocl-form-input">
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="ocl-form-group">
+                <label class="ocl-form-label">メールアドレス <span class="ocl-badge-required">必須</span></label>
+                <input type="email" placeholder="example@email.com" class="ocl-form-input">
+            </div>
+
+            <!-- お問い合わせ内容 -->
+            <div class="ocl-form-group">
+                <label class="ocl-form-label">お問い合わせ内容 <span class="ocl-badge-required">必須</span></label>
+                <textarea placeholder="出張施術の導入を検討したい、詳しい資料がほしい、など自由にご記入ください。" class="ocl-form-textarea"></textarea>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="submit" class="ocl-form-submit-btn">
+                    この内容で送信する ✉
+                </button>
+            </div>
+        </form>
+
+    </div>
 </div>
 
-<!-- 📱 レスポンシブ用のスタイル調整 -->
+<!-- ⚙️ フォームを美しく整える専用スタイル設定（崩れ防止） -->
 <style>
-.ocl-info-table th {
-    width: 25%;
-    background: #fdfdfd;
+.ocl-form-group {
+    margin-bottom: 24px;
+}
+.ocl-form-group:last-of-type {
+    margin-bottom: 0;
+}
+.ocl-form-label {
+    display: block;
+    font-size: 14px;
     color: #2c3e35;
-    font-size: 14px;
     font-weight: 700;
-    padding: 16px 20px;
-    border-bottom: 1px solid #f0f7f3;
-    text-align: left;
-    white-space: nowrap;
+    margin-bottom: 8px;
 }
-.ocl-info-table td {
-    width: 75%;
-    color: #444444;
+.ocl-badge-required {
+    background: #e69b24;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.ocl-form-input, .ocl-form-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cedad2;
+    border-radius: 8px;
+    padding: 12px 14px;
     font-size: 14px;
-    line-height: 1.6;
-    padding: 16px 20px;
-    border-bottom: 1px solid #f0f7f3;
+    color: #333333;
+    background: #fafafa;
+    transition: all 0.2s ease;
 }
-.ocl-info-table tr:last-child th,
-.ocl-info-table tr:last-child td {
-    border-bottom: none;
+.ocl-form-input:focus, .ocl-form-textarea:focus {
+    outline: none;
+    border-color: #2ea760;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(46, 167, 96, 0.1);
+}
+.ocl-form-textarea {
+    height: 120px;
+    resize: vertical;
+}
+.ocl-form-submit-btn {
+    background: linear-gradient(135deg, #2ea760 0%, #258c4f 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(46, 167, 96, 0.3);
+    transition: all 0.2s ease;
+}
+.ocl-form-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(46, 167, 96, 0.4);
 }
 
-/* 📱 スマートフォン表示（画面幅768px以下） */
+/* 📱 スマホサイズ（画面幅768px以下）の表示調整 */
 @media (max-width: 768px) {
-    .ocl-area-flex {
-        flex-direction: column;
-        gap: 12px !important;
+    .ocl-contact-total-container {
+        margin: 40px auto 50px auto !important;
+        padding: 0 16px !important;
     }
-    .ocl-area-card {
-        padding: 16px !important;
+    .ocl-contact-total-container h2 {
+        font-size: 20px !important;
     }
-    .ocl-info-table th, 
-    .ocl-info-table td {
-        padding: 12px 14px !important;
+    .ocl-contact-total-container p {
         font-size: 13px !important;
     }
-    /* スマホ時はテーブルを縦並びにして見やすくする */
-    .ocl-info-table tr {
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid #f0f7f3;
+    .ocl-contact-form-box {
+        padding: 24px 16px !important; /* スマホでは余白を狭めてスッキリさせる */
     }
-    .ocl-info-table tr:last-child {
-        border-bottom: none;
+    .ocl-form-label {
+        font-size: 13px !important;
     }
-    .ocl-info-table th {
-        width: 100% !important;
-        padding-bottom: 4px !important;
-        border-bottom: none !important;
-        background: transparent;
-    }
-    .ocl-info-table td {
-        width: 100% !important;
-        padding-top: 4px !important;
+    .ocl-form-submit-btn {
+        width: 100%; /* スマホではボタンを横いっぱいに広げて押しやすく */
+        padding: 14px 20px !important;
     }
 }
 </style>
-            
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="company">貴社名 / 部署名 <span class="required">必須</span></label>
-                    <input type="text" id="company" name="company" required placeholder="株式会社〇〇 人事労務部">
-                </div>
-                <div class="form-group">
-                    <label for="name">ご担当者様氏名 <span class="required">必須</span></label>
-                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
-                </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス <span class="required">必須</span></label>
-                    <input type="email" id="email" name="email" required placeholder="example@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-                    <textarea id="message" name="message" rows="5" required placeholder="「資料プランが欲しい」「導入の流れを知りたい」などご自由にご記入ください。"></textarea>
-                </div>
-                <div style="text-align: center; width: 100%;">
-                <button type="submit" class="btn btn-primary btn-submit">この内容で送信する（無料）</button>
-            </form>
-        </div>
     </section>
 
     <footer>
