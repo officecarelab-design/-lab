@@ -1198,103 +1198,99 @@ footer {
 /* ==========================================================================
    Office Care Lab専用：超洗練されたタイムライン型フロー（画像幅完全連動）
    ========================================================================== */
-.ocl-timeline-section {
+/* ==========================================================================
+   Office Care Lab専用：PC時横並び・スマホ時縦並びの4ステップ（画像幅完全連動）
+   ========================================================================== */
+.ocl-horizontal-flow {
     width: 100%;
-    max-width: 960px; /* 既存の画像バナーやボタンの幅と完全に一致させます */
+    max-width: 960px; /* 既存の画像バナーやボタンの最大幅と完全に一致させます */
     margin: 40px auto 60px auto;
-    padding: 0 4%;
+    padding: 0 20px;
     box-sizing: border-box;
     font-family: 'Noto Sans JP', sans-serif;
+    
+    /* PC表示のデフォルト：綺麗に横一列に4等分して並べる */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ocl-flow-card {
+    background: #ffffff;
+    border: 1px solid #d3ebd9; /* サイトのテーマグリーンに合わせた淡い緑の枠線 */
+    border-radius: 16px; /* サイト全体の丸みのあるトンマナに統合 */
+    padding: 24px 16px;
+    box-shadow: 0 4px 15px rgba(46, 167, 96, 0.03);
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 32px; /* ステップごとの洗練された間隔 */
+    align-items: center; /* 中身を中央揃えにしてスマートに */
+    text-align: center;
 }
 
-.ocl-timeline-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 28px;
-    background: linear-gradient(to right, #ffffff, #fcfefe);
-    border-left: 4px solid #2ea760; /* 左側にアクセントとなるグリーンのライン */
-    border-radius: 0 16px 16px 0;
-    padding: 20px 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-}
+/* 後半2つのボックス（Step 3, 4）の枠線をゴールド系にしてアクセントをつける */
+.ocl-flow-card:nth-child(3) { border-color: #e5c04d; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.03); }
+.ocl-flow-card:nth-child(4) { border-color: #e5c04d; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.03); }
 
-.ocl-timeline-number {
-    flex-shrink: 0;
-    width: 54px;
-    height: 54px;
-    background: linear-gradient(135deg, #2ea760, #1b6c3c); /* 奥行きのあるリッチグリーン */
+.ocl-flow-badge {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #2ea760, #1b6c3c); /* グリーングラデーション */
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(46, 167, 96, 0.2);
+    margin-bottom: 12px;
 }
 
-.ocl-timeline-number span {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 900;
-    letter-spacing: -0.05em;
-}
+/* 3と4の数字バッジはゴールドグラデーションに */
+.ocl-flow-card:nth-child(3) .ocl-flow-badge { background: linear-gradient(135deg, #e5c04d, #b7931a); }
+.ocl-flow-card:nth-child(4) .ocl-flow-badge { background: linear-gradient(135deg, #e5c04d, #b7931a); }
 
-/* ステップの後半（03, 04）はグラデーションをゴールド系にしてアクセントをつける演出 */
-.ocl-timeline-item:nth-child(3) { border-left-color: #d4af37; }
-.ocl-timeline-item:nth-child(3) .ocl-timeline-number { background: linear-gradient(135deg, #e5c04d, #b7931a); box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2); }
-
-.ocl-timeline-item:nth-child(4) { border-left-color: #d4af37; }
-.ocl-timeline-item:nth-child(4) .ocl-timeline-number { background: linear-gradient(135deg, #e5c04d, #b7931a); box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2); }
-
-.ocl-timeline-content {
-    flex-grow: 1;
-}
-
-.ocl-timeline-content h3 {
-    font-size: 18px;
+.ocl-flow-card h3 {
+    font-size: 15px;
     color: #2c3e35;
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    line-height: 1.4;
 }
 
-.ocl-timeline-content p {
-    font-size: 14px;
+.ocl-flow-card p {
+    font-size: 12.5px;
     color: #55615a;
-    line-height: 1.75;
+    line-height: 1.6;
     margin: 0;
-    text-align: justify;
+    text-align: left; /* 文章自体は左詰めで読みやすく */
 }
 
-/* 📱 スマートフォン表示（レスポンシブ）時の完璧な美しさへの調整 */
-@media (max-width: 768px) {
-    .ocl-timeline-section {
-        gap: 20px;
-        margin: 30px auto 40px auto;
-    }
-    
-    .ocl-timeline-item {
+/* 📱 画面幅の狭いスマートフォンやタブレットでの表示調整 */
+@media (max-width: 900px) {
+    .ocl-horizontal-flow {
+        /* タブレットやスマホ画面では自動的に縦1列の並びに切り替える */
+        grid-template-columns: 1fr;
         gap: 16px;
-        padding: 16px 20px;
+        margin: 30px auto;
     }
     
-    .ocl-timeline-number {
-        width: 42px;
-        height: 42px;
+    .ocl-flow-card {
+        padding: 20px;
+        align-items: flex-start; /* スマホ時は左揃えベースにしてスッキリ見せる */
+        text-align: left;
     }
     
-    .ocl-timeline-number span {
-        font-size: 16px;
+    .ocl-flow-badge {
+        margin-bottom: 8px;
     }
     
-    .ocl-timeline-content h3 {
+    .ocl-flow-card h3 {
         font-size: 15px;
         margin-bottom: 6px;
     }
     
-    .ocl-timeline-content p {
+    .ocl-flow-card p {
         font-size: 13px;
-        line-height: 1.6;
     }
 }
